@@ -48,12 +48,6 @@
   };
 
 
-  services.picom = {
-    enable = true;
-    # backend = "glx";
-    fade = true;
-  }; 
-
   services.spice-vdagentd.enable = true;
 
   # Configure keymap in X11
@@ -103,7 +97,9 @@
     gedit
     git
     neovim
+    nodejs_22
     pavucontrol
+    python312Packages.pip
     ripgrep
     rustup
     unzip
