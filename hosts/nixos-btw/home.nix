@@ -1,12 +1,15 @@
 { config, pkgs, ... }:
 
+let
+  userMod = import ../../user;
+in 
 {
   # Home Manager needs a bit of information about you and the paths it should
   # manage.
   home.username = "emzy";
   home.homeDirectory = "/home/emzy";
 
-  imports = [ ../../user/zsh/zsh.nix ../../user/qtile/qtile.nix ];
+  imports = [ userMod.zsh  userMod.qtile ];
 
   # This value determines the Home Manager release that your configuration is
   # compatible with. This helps avoid breakage when a new Home Manager release
