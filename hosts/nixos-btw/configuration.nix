@@ -41,7 +41,6 @@
     enable = true;
     windowManager.qtile.enable = true; 
     displayManager.sessionCommands = ''
-      xrandr --output Virtual-1 --mode 1920x1080
       xwallpaper --zoom ~/walls/castle.jpg
       xset r rate 400 30 &
     '';
