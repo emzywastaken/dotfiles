@@ -99,6 +99,7 @@
     neovim
     nodejs_22
     pavucontrol
+    psmisc # killall
     python312Packages.pip
     ripgrep
     rustup
