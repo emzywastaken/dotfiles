@@ -47,7 +47,6 @@
   };
 
 
-  services.spice-vdagentd.enable = true;
 
   # Configure keymap in X11
   # services.xserver.xkb.layout = "us";
@@ -55,6 +54,10 @@
 
   # Enable CUPS to print documents.
   # services.printing.enable = true;
+
+  # Bluetooth
+  hardware.bluetooth.enable = true;
+  services.blueman.enable = true;
 
   # Enable sound.
   # hardware.pulseaudio.enable = true;
