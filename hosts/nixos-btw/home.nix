@@ -24,9 +24,10 @@ in
     enable = true;
     settings = {
       window.opacity = 0.9;
+      font.size = 9;
       font.normal = {
         family = "JetBrainsMonoNerdFont";
-	      style = "Regular";
+        style = "Regular";
       };
     };
   };
