@@ -105,6 +105,7 @@
     fzf
     gedit
     git
+    go
     google-chrome
     neovim
     nodejs_22
