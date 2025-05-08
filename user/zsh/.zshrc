@@ -54,6 +54,7 @@ zstyle ':completion:*' menu no
 alias ls='ls --color'
 alias ll='ls -lh'
 alias la='ls -lAh'
+alias lvim='NVIM_APPNAME=lvim nvim'
 
 # Shell integrations
 eval "$(fzf --zsh)"
