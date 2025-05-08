@@ -14,6 +14,7 @@
   # Use the systemd-boot EFI boot loader.
   boot.loader.systemd-boot.enable = true;
   boot.loader.efi.canTouchEfiVariables = true;
+  boot.kernelParams = [ "mem_sleep_default=s2idle" ];
 
   networking.hostName = "nixos-btw"; # Define your hostname.
   # Pick only one of the below networking options.
@@ -39,6 +40,7 @@
   # services.xserver.enable = true;
   services.xserver = {
     enable = true;
+    videoDrivers = [ "nvidia" ];
     windowManager.qtile.enable = true; 
     displayManager.sessionCommands = ''
       xwallpaper --zoom ~/walls/castle.jpg
@@ -46,7 +48,11 @@
     '';
   };
 
-
+  hardware.nvidia = {
+    modesetting.enable = true;
+    powerManagement.enable = true;
+    open = true;
+  };
 
   # Configure keymap in X11
   # services.xserver.xkb.layout = "us";
@@ -98,6 +104,7 @@
     fzf
     gedit
     git
+    google-chrome
     neovim
     nodejs_22
     pavucontrol
@@ -127,6 +134,7 @@
   ];
 
   nix.settings.experimental-features = [ "nix-command" "flakes" ];
+  nixpkgs.config.allowUnfree = true;
 
   # Some programs need SUID wrappers, can be configured further or are
   # started in user sessions.
