@@ -4,10 +4,12 @@
   inputs = {
     nixpkgs.url = "github:nixos/nixpkgs/nixos-unstable";
 
-     home-manager = {
-       url = "github:nix-community/home-manager";
-       inputs.nixpkgs.follows = "nixpkgs";
+    home-manager = {
+      url = "github:nix-community/home-manager";
+      inputs.nixpkgs.follows = "nixpkgs";
      };
+
+    blender-bin.url = "github:edolstra/nix-warez?dir=blender";
   };
 
   outputs = { self, nixpkgs, ... }@inputs: {
@@ -16,6 +18,7 @@
     nixosConfigurations.nixos-btw = nixpkgs.lib.nixosSystem {
       specialArgs = { inherit inputs; };
       modules = [
+        ({config, pkgs, ...}: { nixpkgs.overlays = [inputs.blender-bin.overlays.default ]; })
         ./hosts/nixos-btw/configuration.nix
         inputs.home-manager.nixosModules.default
       ];

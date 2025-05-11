@@ -99,7 +99,9 @@
   # $ nix search wget
   environment.systemPackages = with pkgs; [
     alacritty
+    blender_4_4
     btop
+    cudaPackages.cudatoolkit
     fd
     fish
     fzf
