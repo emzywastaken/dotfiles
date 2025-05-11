@@ -138,6 +138,7 @@
     blender_4_4
     btop
     cudaPackages.cudatoolkit
+    discord
     fd
     fish
     fzf
