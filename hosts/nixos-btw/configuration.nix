@@ -43,6 +43,7 @@
     videoDrivers = [ "nvidia" ];
     windowManager.qtile.enable = true; 
     displayManager.sessionCommands = ''
+      xrandr --dpi 127.3
       xwallpaper --zoom ~/walls/castle.jpg
       xset r rate 400 30 &
     '';
