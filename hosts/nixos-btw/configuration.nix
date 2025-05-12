@@ -131,6 +131,7 @@
 
   programs.firefox.enable = true;
   programs.zsh.enable = true;
+  programs.nix-ld.enable = true;
 
   # List packages installed in system profile. To search, run:
   # $ nix search wget
