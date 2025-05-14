@@ -160,6 +160,7 @@
     git
     go
     google-chrome
+    kitty
     neovim
     nodejs_22
     pavucontrol
