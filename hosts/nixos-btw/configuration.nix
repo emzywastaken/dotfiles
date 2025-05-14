@@ -149,6 +149,7 @@
     alacritty
     blender_4_4
     btop
+    brightnessctl
     cudaPackages.cudatoolkit
     discord
     fd
