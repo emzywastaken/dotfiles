@@ -162,6 +162,7 @@
     google-chrome
     kitty
     neovim
+    networkmanagerapplet
     nodejs_22
     pavucontrol
     psmisc # killall
