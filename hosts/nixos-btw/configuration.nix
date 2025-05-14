@@ -152,6 +152,7 @@
     brightnessctl
     cudaPackages.cudatoolkit
     discord
+    dunst
     fd
     fish
     fzf
