@@ -167,9 +167,12 @@
     python312Packages.pip
     ripgrep
     rustup
+    swww
     unzip
     vim
+    waybar
     wget
+    wofi
     xclip
     xfce.thunar
     xwallpaper
