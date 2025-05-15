@@ -43,7 +43,8 @@ in
 
   programs.rofi = {
     enable = true;
-    terminal = "${pkgs.alacritty}/bin/alacritty";
+    package = pkgs.rofi-wayland;
+    terminal = "${pkgs.kitty}/bin/kitty";
   };
 
   services.network-manager-applet.enable = true;
@@ -55,7 +56,6 @@ in
     fastfetch
     lazygit
     neofetch
-    rofi
     tree
     yazi
 

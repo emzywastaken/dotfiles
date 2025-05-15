@@ -176,7 +176,6 @@
     waybar
     wget
     wl-clipboard
-    wofi
     xclip
     xfce.thunar
     xwallpaper
