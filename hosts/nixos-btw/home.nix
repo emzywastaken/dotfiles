@@ -9,7 +9,7 @@ in
   home.username = "emzy";
   home.homeDirectory = "/home/emzy";
 
-  imports = [ userMod.zsh  userMod.qtile  userMod.lazygit ];
+  imports = [ userMod.zsh  userMod.qtile  userMod.lazygit userMod.rofi ];
 
   # This value determines the Home Manager release that your configuration is
   # compatible with. This helps avoid breakage when a new Home Manager release
@@ -39,12 +39,6 @@ in
     extraConfig = {
       init.defaultBranch = "main";
     };
-  };
-
-  programs.rofi = {
-    enable = true;
-    package = pkgs.rofi-wayland;
-    terminal = "${pkgs.kitty}/bin/kitty";
   };
 
   services.network-manager-applet.enable = true;
