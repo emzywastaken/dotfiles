@@ -50,6 +50,7 @@ in
     fastfetch
     lazygit
     neofetch
+    qbittorrent
     tree
     yazi
 
