@@ -43,6 +43,21 @@ in
 
   services.network-manager-applet.enable = true;
 
+  gtk = {
+    enable = true;
+    cursorTheme.package = pkgs.bibata-cursors;
+    cursorTheme.name = "Bibata-Modern-Ice";
+
+    theme.package = pkgs.adw-gtk3;
+    theme.name = "adw-gtk3-dark";
+  };
+
+  qt = {
+    enable = true;
+    platformTheme.name = "gtk";
+    style.name = "adwaita-dark";
+  };
+
   # The home.packages option allows you to install Nix packages into your
   # environment.
   home.packages = with pkgs; [
