@@ -31,6 +31,8 @@
     ];
 
     initContent = ''
+      export PATH="$PATH:$HOME/.zvm/bin"
+
       HISTDUP=erase
 
       # Completion styling
