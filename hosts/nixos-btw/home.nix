@@ -76,6 +76,7 @@ in
     lazygit
     neofetch
     qbittorrent
+    qview
     tree
     vlc
     yazi
