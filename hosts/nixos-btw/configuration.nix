@@ -114,6 +114,9 @@
   # services.libinput.enable = true;
   services.libinput.touchpad.naturalScrolling = true;
 
+  # needed for store VS Code auth token 
+  services.gnome.gnome-keyring.enable = true;
+
   # Define a user account. Don't forget to set a password with ‘passwd’.
   users.users.emzy = {
     isNormalUser = true;
@@ -124,6 +127,7 @@
   home-manager = {
     # also pass inputs to home-manager modules
     extraSpecialArgs = { inherit inputs; };
+    useGlobalPkgs = true;
     users = {
       "emzy" = import ./home.nix;
     };

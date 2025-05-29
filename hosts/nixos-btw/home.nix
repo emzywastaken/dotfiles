@@ -41,6 +41,11 @@ in
     };
   };
 
+  programs.vscode = {
+    enable = true;
+    package = pkgs.vscode.fhs;
+  };
+
   services.network-manager-applet.enable = true;
 
   gtk = {
