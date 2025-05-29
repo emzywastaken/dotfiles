@@ -75,6 +75,7 @@ in
     })
     lazygit
     neofetch
+    obsidian
     qbittorrent
     qview
     tree
