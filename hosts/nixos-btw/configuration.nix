@@ -179,6 +179,7 @@
     nodejs_22
     pavucontrol
     psmisc # killall
+    python3
     python312Packages.pip
     ripgrep
     rustup
