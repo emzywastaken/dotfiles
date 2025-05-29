@@ -141,8 +141,13 @@
     xwayland.enable = true;
   };
 
-  environment.sessionVariables = {
-    NIXOS_OZONE_WL = "1";
+  environment = {
+    sessionVariables = {
+      NIXOS_OZONE_WL = "1";
+    };
+    variables = {
+      FREETYPE_PROPERTIES = "cff:no-stem-darkening=0 autofitter:no-stem-darkening=0";
+    };
   };
 
   xdg.portal.enable = true;
