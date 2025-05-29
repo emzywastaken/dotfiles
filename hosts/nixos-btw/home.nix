@@ -77,6 +77,7 @@ in
     neofetch
     qbittorrent
     tree
+    vlc
     yazi
     zvm
 
