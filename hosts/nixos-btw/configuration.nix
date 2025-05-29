@@ -117,6 +117,9 @@
   # needed for store VS Code auth token 
   services.gnome.gnome-keyring.enable = true;
 
+  # Thumbnail support ofr images
+  services.tumbler.enable = true;
+
   # Define a user account. Don't forget to set a password with ‘passwd’.
   users.users.emzy = {
     isNormalUser = true;
@@ -136,6 +139,7 @@
   programs.firefox.enable = true;
   programs.zsh.enable = true;
   programs.nix-ld.enable = true;
+  programs.thunar.enable = true;
   programs.hyprland = {
     enable = true;
     xwayland.enable = true;
@@ -185,7 +189,6 @@
     wget
     wl-clipboard
     xclip
-    xfce.thunar
     xwallpaper
     zsh
 
