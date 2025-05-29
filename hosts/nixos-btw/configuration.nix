@@ -160,7 +160,6 @@
     gedit
     git
     go
-    google-chrome
     kitty
     neovim
     networkmanagerapplet

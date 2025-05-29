@@ -63,6 +63,11 @@ in
   home.packages = with pkgs; [
     bat
     fastfetch
+    (google-chrome.override {
+      commandLineArgs = [
+        "--enable-features=TouchpadOverscrollHistoryNavigation"
+      ];
+    })
     lazygit
     neofetch
     qbittorrent
