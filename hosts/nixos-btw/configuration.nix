@@ -201,6 +201,7 @@
     autoconf
     automake
     libtool
+    man-pages
   ];
   
   fonts.packages = with pkgs; [
