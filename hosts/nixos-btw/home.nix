@@ -78,6 +78,7 @@ in
     obsidian
     qbittorrent
     qview
+    tokei
     tree
     vlc
     yazi
