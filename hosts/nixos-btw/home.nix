@@ -46,6 +46,11 @@ in
     package = pkgs.vscode.fhs;
   };
 
+  programs.obs-studio = {
+    enable = true;
+    package = pkgs.obs-studio.override { cudaSupport = true; };
+  };
+
   services.network-manager-applet.enable = true;
 
   gtk = {
