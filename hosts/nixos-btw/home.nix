@@ -78,6 +78,7 @@ in
     obsidian
     qbittorrent
     qview
+    spotify
     tokei
     tree
     vlc
