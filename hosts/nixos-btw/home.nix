@@ -82,6 +82,7 @@ in
     tree
     vlc
     yazi
+    zathura
     zvm
 
     # # It is sometimes useful to fine-tune packages, for example, by applying
