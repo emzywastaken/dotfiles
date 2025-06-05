@@ -11,9 +11,10 @@
       inputs.home-manager.nixosModules.default
     ];
 
-  # Use the systemd-boot EFI boot loader.
-  boot.loader.systemd-boot.enable = true;
-  boot.loader.efi.canTouchEfiVariables = true;
+  boot.loader.grub.enable = true;
+  boot.loader.grub.device = "nodev";
+  boot.loader.grub.efiSupport = true;
+  boot.loader.grub.efiInstallAsRemovable = true;
   boot.kernelParams = [ "mem_sleep_default=s2idle" ];
 
   networking.hostName = "nixos-btw"; # Define your hostname.
