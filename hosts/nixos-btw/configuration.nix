@@ -161,7 +161,6 @@
   # $ nix search wget
   environment.systemPackages = with pkgs; [
     alacritty
-    blender_4_4
     btop
     brightnessctl
     cudaPackages.cudatoolkit

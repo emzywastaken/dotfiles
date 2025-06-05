@@ -72,6 +72,7 @@ in
   # environment.
   home.packages = with pkgs; [
     bat
+    blender_4_4
     fastfetch
     (google-chrome.override {
       commandLineArgs = [
