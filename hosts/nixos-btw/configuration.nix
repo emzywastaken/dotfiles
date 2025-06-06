@@ -198,12 +198,9 @@
     gcc
     gnumake
     cmake
-    autoconf
-    automake
-    libtool
     man-pages
   ];
-  
+
   fonts.packages = with pkgs; [
     nerd-fonts.jetbrains-mono
   ];
