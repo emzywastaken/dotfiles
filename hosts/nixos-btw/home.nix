@@ -2,6 +2,7 @@
 
 let
   userMod = import ../../user;
+  spotify-custom = pkgs.callPackage userMod.packages.spotify-spotx {};
 in 
 {
   # Home Manager needs a bit of information about you and the paths it should
@@ -84,7 +85,7 @@ in
     obsidian
     qbittorrent
     qview
-    spotify
+    spotify-custom
     tokei
     tree
     vlc
