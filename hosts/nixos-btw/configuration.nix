@@ -124,7 +124,7 @@ in
   # needed for store VS Code auth token 
   services.gnome.gnome-keyring.enable = true;
 
-  # Thumbnail support ofr images
+  # Thumbnail support for images
   services.tumbler.enable = true;
 
   # Define a user account. Don't forget to set a password with ‘passwd’.
