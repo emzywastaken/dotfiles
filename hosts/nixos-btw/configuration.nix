@@ -143,13 +143,16 @@ in
     };
   };
 
-  programs.firefox.enable = true;
-  programs.zsh.enable = true;
-  programs.nix-ld.enable = true;
-  programs.thunar.enable = true;
-  programs.hyprland = {
-    enable = true;
-    xwayland.enable = true;
+  programs = {
+    firefox.enable = true;
+    zsh.enable = true;
+    nix-ld.enable = true;
+    thunar.enable = true;
+    steam.enable = true;
+    hyprland = {
+      enable = true;
+      xwayland.enable = true;
+    };
   };
 
   environment = {
