@@ -9,7 +9,10 @@
       inputs.nixpkgs.follows = "nixpkgs";
      };
 
-    blender-bin.url = "github:edolstra/nix-warez?dir=blender";
+    blender-bin = { 
+      url = "github:edolstra/nix-warez?dir=blender";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
   };
 
   outputs = { self, nixpkgs, ... }@inputs: {
