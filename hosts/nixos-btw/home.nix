@@ -1,8 +1,8 @@
 { config, pkgs, ... }:
 
 let
-  userMod = import ../../user;
-  spotify-custom = pkgs.callPackage userMod.packages.spotify-spotx {};
+  userModules = import ../../user;
+  spotify-custom = pkgs.callPackage userModules.packages.spotify-spotx {};
 in 
 {
   # Home Manager needs a bit of information about you and the paths it should
@@ -10,7 +10,7 @@ in
   home.username = "emzy";
   home.homeDirectory = "/home/emzy";
 
-  imports = [ userMod.zsh  userMod.qtile  userMod.lazygit userMod.rofi ];
+  imports = [ userModules.zsh  userModules.qtile  userModules.lazygit userModules.rofi ];
 
   # This value determines the Home Manager release that your configuration is
   # compatible with. This helps avoid breakage when a new Home Manager release
