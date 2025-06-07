@@ -170,7 +170,6 @@ in
     alacritty
     btop
     brightnessctl
-    cudaPackages.cudatoolkit
     discord
     dunst
     fd
