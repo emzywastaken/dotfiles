@@ -48,6 +48,9 @@
       xset r rate 400 30 &
     '';
   };
+  services.displayManager = {
+    sddm.enable = true;
+  };
 
   hardware = {
     graphics = {
