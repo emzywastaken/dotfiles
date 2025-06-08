@@ -184,7 +184,6 @@ in
     kitty
     neovim
     networkmanagerapplet
-    nixd
     nodejs_22
     pavucontrol
     psmisc # killall

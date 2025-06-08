@@ -85,6 +85,7 @@ in
     })
     lazygit
     neofetch
+    nixd # nix lsp
     obsidian
     qbittorrent
     qview
