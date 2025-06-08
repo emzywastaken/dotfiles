@@ -5,6 +5,6 @@
   rofi = ./rofi/rofi.nix;
 
   packages = {
-    spotify-spotx = ./spotify/spotify-spox.nix;
+    spotify-spotx = ./spotify/spotify-spotx.nix;
   };
 }
