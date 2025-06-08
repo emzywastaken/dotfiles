@@ -20,24 +20,8 @@ spotify.overrideAttrs(oldAttrs: {
   ]);
 
   unpackPhase =
-    builtins.replaceStrings
-      [ "runHook postUnpack" ]
-      [
-        ''
-          patchShebangs --build ${spotx}
-          runHook postUnpack
-        ''
-      ]
-      oldAttrs.unpackPhase;
+    "patchShebangs --build ${spotx}"
+    + oldAttrs.unpackPhase;
 
-  installPhase =
-      builtins.replaceStrings
-        [ "runHook postInstall" ]
-        [
-          ''
-            bash ${spotx} -f -P "$out/share/spotify"
-            runHook postInstall
-          ''
-        ]
-        oldAttrs.installPhase;
+  postInstall = ''bash ${spotx} -f -P "$out/share/spotify"'';
 })
