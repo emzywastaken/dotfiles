@@ -6,7 +6,7 @@ let
     sha256 = "sha256-Dt5A3cA5M+g82RiZn1cbD7CVzAz/b8c1nTEpkp273/s=";
   };
 in
-pkgs.stdenv.mkDerivation {
+pkgs.stdenvNoCC.mkDerivation {
   name = "sddm-theme";
 
   src = pkgs.fetchFromGitHub {
