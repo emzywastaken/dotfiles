@@ -12,6 +12,7 @@ let
 in
 spotify.overrideAttrs(oldAttrs: {
   nativeBuildInputs = oldAttrs.nativeBuildInputs ++ (with pkgs; [
+    util-linux
     perl
     unzip
     zip
