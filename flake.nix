@@ -7,7 +7,7 @@
     home-manager = {
       url = "github:nix-community/home-manager";
       inputs.nixpkgs.follows = "nixpkgs";
-     };
+    };
 
     blender-bin = { 
       url = "github:edolstra/nix-warez?dir=blender";
