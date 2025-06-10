@@ -183,7 +183,6 @@ in
     git
     go
     kitty
-    neovim
     networkmanagerapplet
     nodejs_22
     pavucontrol
