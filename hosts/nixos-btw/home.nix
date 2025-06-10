@@ -90,6 +90,7 @@ in
         "--enable-features=TouchpadOverscrollHistoryNavigation"
       ];
     })
+    kitty
     lazygit
     neofetch
     nixd # nix lsp

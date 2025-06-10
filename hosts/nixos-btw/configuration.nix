@@ -181,7 +181,6 @@ in
     gedit
     git
     go
-    kitty
     networkmanagerapplet
     nodejs_22
     pavucontrol
