@@ -1,16 +1,22 @@
-{ config, pkgs, ... }:
-
-let
+{
+  config,
+  pkgs,
+  ...
+}: let
   userModules = import ../../user;
   spotify-custom = pkgs.callPackage userModules.packages.spotify-spotx {};
-in 
-{
+in {
   # Home Manager needs a bit of information about you and the paths it should
   # manage.
   home.username = "emzy";
   home.homeDirectory = "/home/emzy";
 
-  imports = [ userModules.zsh  userModules.qtile  userModules.lazygit userModules.rofi ];
+  imports = [
+    userModules.zsh
+    userModules.qtile
+    userModules.lazygit
+    userModules.rofi
+  ];
 
   # This value determines the Home Manager release that your configuration is
   # compatible with. This helps avoid breakage when a new Home Manager release
@@ -64,7 +70,7 @@ in
 
   programs.obs-studio = {
     enable = true;
-    package = pkgs.obs-studio.override { cudaSupport = true; };
+    package = pkgs.obs-studio.override {cudaSupport = true;};
   };
 
   programs.fish.enable = true;
@@ -128,7 +134,6 @@ in
     #   echo "Hello, ${config.home.username}!"
     # '')
   ];
-
 
   # Home Manager can also manage your environment variables through
   # 'home.sessionVariables'. These will be explicitly sourced when using a
