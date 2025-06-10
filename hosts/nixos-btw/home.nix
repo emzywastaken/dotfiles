@@ -57,6 +57,8 @@ in
     package = pkgs.obs-studio.override { cudaSupport = true; };
   };
 
+  programs.fish.enable = true;
+
   services.network-manager-applet.enable = true;
 
   gtk = {

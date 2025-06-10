@@ -177,7 +177,6 @@ in
     discord
     dunst
     fd
-    fish
     fzf
     gedit
     git
