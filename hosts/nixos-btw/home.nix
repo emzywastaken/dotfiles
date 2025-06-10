@@ -33,6 +33,15 @@ in
     };
   };
 
+  programs.kitty = {
+    enable = true;
+    font.name = "JetBrainsMono Nerd Font";
+    font.size = 11;
+    settings = {
+      background_opacity = 0.8;
+    };
+  };
+
   programs.git = {
     enable = true;
     userName = "emzywastaken";
