@@ -138,6 +138,7 @@ in
     # also pass inputs to home-manager modules
     extraSpecialArgs = { inherit inputs; };
     useGlobalPkgs = true;
+    useUserPackages = true;
     users = {
       "emzy" = import ./home.nix;
     };
