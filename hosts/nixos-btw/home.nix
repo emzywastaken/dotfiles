@@ -16,6 +16,7 @@ in {
     userModules.qtile
     userModules.lazygit
     userModules.rofi
+    userModules.hm
   ];
 
   # This value determines the Home Manager release that your configuration is
@@ -26,6 +27,11 @@ in {
   # want to update the value, then make sure to first check the Home Manager
   # release notes.
   home.stateVersion = "24.11"; # Please read the comment before changing.
+
+  modules.fish = {
+    enable = true;
+    defaultInteractiveShell = true;
+  };
 
   programs.alacritty = {
     enable = true;
@@ -72,8 +78,6 @@ in {
     enable = true;
     package = pkgs.obs-studio.override {cudaSupport = true;};
   };
-
-  programs.fish.enable = true;
 
   services.network-manager-applet.enable = true;
 
