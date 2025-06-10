@@ -9,19 +9,27 @@
       inputs.nixpkgs.follows = "nixpkgs";
     };
 
-    blender-bin = { 
+    blender-bin = {
       url = "github:edolstra/nix-warez?dir=blender";
       inputs.nixpkgs.follows = "nixpkgs";
     };
   };
 
-  outputs = { self, nixpkgs, ... }@inputs: {
+  outputs = {
+    self,
+    nixpkgs,
+    ...
+  } @ inputs: {
     # use "nixos", or your hostname as the name of the configuration
     # it's a better practice than "default" shown in the video
     nixosConfigurations.nixos-btw = nixpkgs.lib.nixosSystem {
-      specialArgs = { inherit inputs; };
+      specialArgs = {inherit inputs;};
       modules = [
-        ({config, pkgs, ...}: { nixpkgs.overlays = [inputs.blender-bin.overlays.default ]; })
+        ({
+          config,
+          pkgs,
+          ...
+        }: {nixpkgs.overlays = [inputs.blender-bin.overlays.default];})
         ./hosts/nixos-btw/configuration.nix
         inputs.home-manager.nixosModules.default
       ];

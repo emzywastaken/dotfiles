@@ -1,28 +1,30 @@
 # Edit this configuration file to define what should be installed on
 # your system. Help is available in the configuration.nix(5) man page, on
 # https://search.nixos.org/options and in the NixOS manual (`nixos-help`).
-
-{ config, lib, pkgs, inputs, ... }:
-
-let
-  systemModules = import ../../system;
-in
 {
-  imports =
-    [ # Include the results of the hardware scan.
-      ./hardware-configuration.nix
-    ];
+  config,
+  lib,
+  pkgs,
+  inputs,
+  ...
+}: let
+  systemModules = import ../../system;
+in {
+  imports = [
+    # Include the results of the hardware scan.
+    ./hardware-configuration.nix
+  ];
 
   boot.loader.grub.enable = true;
   boot.loader.grub.device = "nodev";
   boot.loader.grub.efiSupport = true;
   boot.loader.grub.efiInstallAsRemovable = true;
-  boot.kernelParams = [ "mem_sleep_default=s2idle" ];
+  boot.kernelParams = ["mem_sleep_default=s2idle"];
 
   networking.hostName = "nixos-btw"; # Define your hostname.
   # Pick only one of the below networking options.
   # networking.wireless.enable = true;  # Enables wireless support via wpa_supplicant.
-  networking.networkmanager.enable = true;  # Easiest to use and most distros use this by default.
+  networking.networkmanager.enable = true; # Easiest to use and most distros use this by default.
 
   # Set your time zone.
   time.timeZone = "Africa/Lagos";
@@ -43,8 +45,8 @@ in
   # services.xserver.enable = true;
   services.xserver = {
     enable = true;
-    videoDrivers = [ "nvidia" ];
-    windowManager.qtile.enable = true; 
+    videoDrivers = ["nvidia"];
+    windowManager.qtile.enable = true;
     displayManager.sessionCommands = ''
       xrandr --dpi 127.3
       xwallpaper --zoom ~/walls/castle.jpg
@@ -53,7 +55,7 @@ in
   };
   services.displayManager = {
     sddm.enable = true;
-    sddm.theme = "${systemModules.packages.sddm-theme { inherit pkgs; }}";
+    sddm.theme = "${systemModules.packages.sddm-theme {inherit pkgs;}}";
   };
 
   hardware = {
@@ -121,7 +123,7 @@ in
   # services.libinput.enable = true;
   services.libinput.touchpad.naturalScrolling = true;
 
-  # needed for store VS Code auth token 
+  # needed for store VS Code auth token
   services.gnome.gnome-keyring.enable = true;
 
   # Thumbnail support for images
@@ -130,13 +132,13 @@ in
   # Define a user account. Don't forget to set a password with ‘passwd’.
   users.users.emzy = {
     isNormalUser = true;
-    extraGroups = [ "wheel" ]; # Enable ‘sudo’ for the user.
+    extraGroups = ["wheel"]; # Enable ‘sudo’ for the user.
     shell = pkgs.zsh;
   };
 
   home-manager = {
     # also pass inputs to home-manager modules
-    extraSpecialArgs = { inherit inputs; };
+    extraSpecialArgs = {inherit inputs;};
     useGlobalPkgs = true;
     useUserPackages = true;
     users = {
@@ -166,7 +168,7 @@ in
   };
 
   xdg.portal.enable = true;
-  xdg.portal.extraPortals = [ pkgs.xdg-desktop-portal-gtk ];
+  xdg.portal.extraPortals = [pkgs.xdg-desktop-portal-gtk];
 
   # List packages installed in system profile. To search, run:
   # $ nix search wget
@@ -213,7 +215,7 @@ in
     nerd-fonts.jetbrains-mono
   ];
 
-  nix.settings.experimental-features = [ "nix-command" "flakes" ];
+  nix.settings.experimental-features = ["nix-command" "flakes"];
   nixpkgs.config.allowUnfree = true;
 
   # Some programs need SUID wrappers, can be configured further or are
@@ -259,4 +261,3 @@ in
   # For more information, see `man configuration.nix` or https://nixos.org/manual/nixos/stable/options#opt-system.stateVersion .
   system.stateVersion = "24.11"; # Did you read the comment?
 }
-

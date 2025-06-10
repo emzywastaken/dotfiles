@@ -1,6 +1,4 @@
-{  pkgs, ... }:
-
-{
+{pkgs, ...}: {
   programs.zsh = {
     enable = true;
     enableCompletion = true;
@@ -27,7 +25,10 @@
     };
 
     plugins = [
-      { name = "fzf-tab"; src = pkgs.zsh-fzf-tab.src; }
+      {
+        name = "fzf-tab";
+        src = pkgs.zsh-fzf-tab.src;
+      }
     ];
 
     initContent = ''
@@ -45,7 +46,7 @@
     '';
   };
 
-  home.packages =  [
+  home.packages = [
     pkgs.starship
   ];
 }
