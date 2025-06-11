@@ -19,7 +19,9 @@
     self,
     nixpkgs,
     ...
-  } @ inputs: {
+  } @ inputs: let
+    system = "x86_64-linux";
+  in {
     # use "nixos", or your hostname as the name of the configuration
     # it's a better practice than "default" shown in the video
     nixosConfigurations.nixos-btw = nixpkgs.lib.nixosSystem {
@@ -34,5 +36,7 @@
         inputs.home-manager.nixosModules.default
       ];
     };
+
+    formatter.${system} = nixpkgs.legacyPackages.${system}.alejandra;
   };
 }
