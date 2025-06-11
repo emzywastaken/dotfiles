@@ -7,8 +7,8 @@
   cfg = config.modules;
 in {
   options.modules = {
-    fish.enable = lib.mkEnableOption "fish module";
-    fish.defaultInteractiveShell = lib.mkEnableOption "defaultShell";
+    fish.enable = lib.mkEnableOption "Whether to enable custom fish module";
+    fish.defaultInteractiveShell = lib.mkEnableOption "Whether to make fish the default interactive shell";
   };
 
   config = lib.mkIf cfg.fish.enable {
