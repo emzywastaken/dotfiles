@@ -104,6 +104,8 @@ in {
     style.name = "adwaita-dark";
   };
 
+  services.hyprpolkitagent.enable = true;
+
   # The home.packages option allows you to install Nix packages into your
   # environment.
   home.packages = with pkgs; [
