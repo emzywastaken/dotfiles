@@ -30,6 +30,7 @@ in {
 
   modules.fish = {
     enable = true;
+    withStarshipPrompt = true;
     defaultInteractiveShell = true;
   };
 
