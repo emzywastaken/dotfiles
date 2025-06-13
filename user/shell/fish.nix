@@ -15,16 +15,16 @@ in {
   config = lib.mkIf cfg.enable {
     programs.fish.enable = true;
 
-    programs.fish.interactiveShellInit = lib.mkIf cfg.withStarshipPrompt
+    programs.fish.interactiveShellInit =
+      lib.mkIf cfg.withStarshipPrompt
       "eval (${pkgs.starship}/bin/starship init fish)";
     programs.fish.shellAbbrs.lvim = "NVIM_APPNAME=lvim nvim";
 
     # make fish default interactive shell
+    home.sessionVariables.SHELL = lib.mkIf cfg.defaultInteractiveShell "fish";
     programs.kitty = lib.mkIf cfg.defaultInteractiveShell {
       settings.shell = "${lib.getExe pkgs.fish}";
     };
-
-    home.sessionVariables.SHELL = lib.mkIf cfg.defaultInteractiveShell "fish";
 
     programs.fzf.enable = true;
     programs.fzf.enableFishIntegration = true;
