@@ -130,6 +130,7 @@ in {
     kitty
     lazygit
     neofetch
+    nh
     nixd # nix lsp
     obsidian
     qbittorrent
