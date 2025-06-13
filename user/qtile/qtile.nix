@@ -1,3 +1,3 @@
 {pkgs, ...}: {
-  home.file.".config/qtile/config.py".source = ./config.py;
+  xdg.configFile."qtile/config.py".source = ./config.py;
 }
