@@ -18,6 +18,7 @@ in {
     programs.fish.interactiveShellInit =
       lib.mkIf cfg.withStarshipPrompt
       "eval (${pkgs.starship}/bin/starship init fish)";
+
     programs.fish.shellAbbrs.lvim = "NVIM_APPNAME=lvim nvim";
 
     # make fish default interactive shell
@@ -28,5 +29,9 @@ in {
 
     programs.fzf.enable = true;
     programs.fzf.enableFishIntegration = true;
+
+    home.packages = lib.mkIf cfg.withStarshipPrompt [
+      pkgs.starship
+    ];
   };
 }
