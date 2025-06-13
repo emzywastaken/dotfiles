@@ -136,6 +136,7 @@ in {
     qbittorrent
     qview
     spotify-custom
+    tealdeer
     tokei
     tree
     vlc
