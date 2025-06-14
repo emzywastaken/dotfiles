@@ -113,7 +113,12 @@ in {
       enable = true;
       createDirectories = true;
     };
-    mimeApps.enable = true;
+    mimeApps = {
+      enable = true;
+      defaultApplications = {
+        "application/pdf" = ["org.pwmt.zathura-pdf-mupdf.desktop"];
+      };
+    };
   };
 
   # The home.packages option allows you to install Nix packages into your
