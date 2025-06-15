@@ -141,6 +141,7 @@ in {
     obsidian
     qbittorrent
     qview
+    razer-cli
     spotify-custom
     tealdeer
     tokei
