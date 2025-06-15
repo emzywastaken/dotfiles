@@ -83,8 +83,6 @@ in {
     package = pkgs.obs-studio.override {cudaSupport = true;};
   };
 
-  services.network-manager-applet.enable = true;
-
   gtk = {
     enable = true;
     cursorTheme.package = pkgs.bibata-cursors;
@@ -103,6 +101,10 @@ in {
     style.name = "adwaita-dark";
   };
 
+  services.dunst = {
+    enable = true;
+  };
+  services.network-manager-applet.enable = true;
   services.hyprpolkitagent.enable = true;
 
   xdg = {
@@ -125,6 +127,7 @@ in {
     osu-lazer-bin
     bat
     blender_4_4
+    discord
     fastfetch
     (google-chrome.override {
       commandLineArgs = [

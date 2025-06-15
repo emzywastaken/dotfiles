@@ -181,8 +181,6 @@ in {
     alacritty
     btop
     brightnessctl
-    discord
-    dunst
     fd
     fzf
     gedit
