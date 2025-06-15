@@ -4,6 +4,7 @@
     enableCompletion = true;
     autosuggestion.enable = true;
     syntaxHighlighting.enable = true;
+    defaultKeymap = "emacs";
 
     shellAliases = {
       ls = "ls --color";
