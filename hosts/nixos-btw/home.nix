@@ -124,6 +124,7 @@ in {
   # The home.packages option allows you to install Nix packages into your
   # environment.
   home.packages = with pkgs; [
+    osu-lazer-bin
     bat
     blender_4_4
     fastfetch
