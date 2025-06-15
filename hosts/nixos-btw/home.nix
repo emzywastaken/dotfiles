@@ -30,7 +30,6 @@ in {
 
   modules.fish = {
     enable = true;
-    withStarshipPrompt = true;
   };
 
   programs.alacritty = {
