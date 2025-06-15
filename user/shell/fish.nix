@@ -22,10 +22,10 @@ in {
     programs.fish.shellAbbrs.lvim = "NVIM_APPNAME=lvim nvim";
 
     # make fish default interactive shell
-    home.sessionVariables.SHELL = lib.mkIf cfg.defaultInteractiveShell "fish";
-    programs.kitty = lib.mkIf cfg.defaultInteractiveShell {
-      settings.shell = "${lib.getExe pkgs.fish}";
-    };
+    home.sessionVariables.SHELL = lib.optionalString cfg.defaultInteractiveShell "fish";
+    programs.kitty.settings.shell =
+      lib.optionalString cfg.defaultInteractiveShell
+      "${lib.getExe pkgs.fish}";
 
     programs.fzf.enable = true;
     programs.fzf.enableFishIntegration = true;
