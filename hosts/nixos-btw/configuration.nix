@@ -173,7 +173,7 @@ in {
   xdg.portal.enable = true;
   xdg.portal.extraPortals = [pkgs.xdg-desktop-portal-gtk];
 
-  security.pam.services.sddm.enableGnomeKeyring = true;
+  security.pam.services.sddm-keyring.enableGnomeKeyring = true;
 
   # List packages installed in system profile. To search, run:
   # $ nix search wget
