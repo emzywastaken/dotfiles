@@ -13,6 +13,7 @@ in {
   imports = [
     # Include the results of the hardware scan.
     ./hardware-configuration.nix
+    systemModules.thunar
   ];
 
   boot.loader.grub.enable = true;
@@ -131,9 +132,6 @@ in {
   # needed for store VS Code auth token
   services.gnome.gnome-keyring.enable = true;
 
-  # Thumbnail support for images
-  services.tumbler.enable = true;
-
   # Define a user account. Don't forget to set a password with ‘passwd’.
   users.users.emzy = {
     isNormalUser = true;
@@ -155,7 +153,6 @@ in {
     firefox.enable = true;
     zsh.enable = true;
     nix-ld.enable = true;
-    thunar.enable = true;
     steam.enable = true;
     hyprland = {
       enable = true;
