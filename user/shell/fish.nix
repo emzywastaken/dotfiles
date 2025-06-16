@@ -21,17 +21,17 @@ in {
 
     programs.fish.shellAbbrs.lvim = "NVIM_APPNAME=lvim nvim";
 
+    programs.fzf.enable = true;
+    programs.fzf.enableFishIntegration = true;
+
     # make fish default interactive shell
     home.sessionVariables = lib.mkIf cfg.defaultInteractiveShell {
       SHELL = "fish";
     };
-    
-    programs.kitty.settings.shell =
-      lib.optionalString cfg.defaultInteractiveShell
-      "${lib.getExe pkgs.fish}";
 
-    programs.fzf.enable = true;
-    programs.fzf.enableFishIntegration = true;
+    programs.kitty = lib.mkIf cfg.defaultInteractiveShell {
+      settings.shell = "${lib.getExe pkgs.fish}";
+    };
 
     home.packages = lib.mkIf cfg.withStarshipPrompt [
       pkgs.starship
