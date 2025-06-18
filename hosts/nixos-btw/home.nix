@@ -28,6 +28,8 @@ in {
   # release notes.
   home.stateVersion = "24.11"; # Please read the comment before changing.
 
+  home.shell.enableShellIntegration = false;
+  #
   modules.fish = {
     enable = true;
   };
@@ -103,6 +105,11 @@ in {
 
   services.dunst = {
     enable = true;
+    settings = {
+      global = {
+        corner_radius = 10;
+      };
+    };
   };
   services.network-manager-applet.enable = true;
   services.hyprpolkitagent.enable = true;
@@ -124,7 +131,6 @@ in {
   # The home.packages option allows you to install Nix packages into your
   # environment.
   home.packages = with pkgs; [
-    osu-lazer-bin
     bat
     blender_4_4
     discord
@@ -140,6 +146,7 @@ in {
     nh
     nixd # nix lsp
     obsidian
+    osu-lazer-bin
     qbittorrent
     qview
     razer-cli
