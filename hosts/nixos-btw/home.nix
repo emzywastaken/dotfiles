@@ -29,7 +29,7 @@ in {
   home.stateVersion = "24.11"; # Please read the comment before changing.
 
   home.shell.enableShellIntegration = false;
-  #
+
   modules.fish = {
     enable = true;
   };
@@ -85,11 +85,16 @@ in {
     package = pkgs.obs-studio.override {cudaSupport = true;};
   };
 
+  home.pointerCursor = {
+    x11.enable = true;
+    gtk.enable = true;
+    package = pkgs.bibata-cursors;
+    size = 24;
+    name = "Bibata-Modern-Ice";
+  };
+
   gtk = {
     enable = true;
-    cursorTheme.package = pkgs.bibata-cursors;
-    cursorTheme.name = "Bibata-Modern-Ice";
-
     theme.package = pkgs.adw-gtk3;
     theme.name = "adw-gtk3-dark";
 
