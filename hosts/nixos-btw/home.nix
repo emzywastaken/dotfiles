@@ -159,6 +159,7 @@ in {
     tealdeer
     tokei
     tree
+    vesktop
     vlc
     yazi
     zathura
