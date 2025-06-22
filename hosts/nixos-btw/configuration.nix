@@ -99,6 +99,8 @@ in {
     };
   };
 
+  services.openssh.enable = true;
+
   services.tlp.enable = true;
 
   # Configure keymap in X11
@@ -228,9 +230,6 @@ in {
   # };
 
   # List services that you want to enable:
-
-  # Enable the OpenSSH daemon.
-  # services.openssh.enable = true;
 
   # Open ports in the firewall.
   # networking.firewall.allowedTCPPorts = [ ... ];
