@@ -62,7 +62,28 @@
       "inputs": {
         "blender-bin": "blender-bin",
         "home-manager": "home-manager",
-        "nixpkgs": "nixpkgs"
+        "nixpkgs": "nixpkgs",
+        "silent-sddm": "silent-sddm"
+      }
+    },
+    "silent-sddm": {
+      "inputs": {
+        "nixpkgs": [
+          "nixpkgs"
+        ]
+      },
+      "locked": {
+        "lastModified": 1750626673,
+        "narHash": "sha256-qpAhMKfDHWXl1tZANpoE9yj4d+4WSQUhIQjOM04vfdk=",
+        "owner": "uiriansan",
+        "repo": "SilentSDDM",
+        "rev": "296c6111b47c74003b50c7e26ddf3347e15707c0",
+        "type": "github"
+      },
+      "original": {
+        "owner": "uiriansan",
+        "repo": "SilentSDDM",
+        "type": "github"
       }
     }
   },

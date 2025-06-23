@@ -54,9 +54,20 @@ in {
       xset r rate 400 30 &
     '';
   };
-  services.displayManager = {
-    sddm.enable = true;
-    sddm.theme = "${systemModules.packages.sddm-theme {inherit pkgs;}}";
+
+  services.displayManager.sddm = {
+    enable = true;
+    package = pkgs.kdePackages.sddm;
+    theme = "silent";
+    settings = {
+      General = {
+        GreeterEnvironment = "QML2_IMPORT_PATH=/run/current-system/sw/share/sddm/themes/silent/components/,QT_IM_MODULE=qtvirtualkeyboard";
+        InputMethod = "qtvirtualkeyboard";
+      };
+    };
+    extraPackages = [
+      inputs.silent-sddm.packages.x86_64-linux.default
+    ];
   };
 
   hardware = {
@@ -179,6 +190,8 @@ in {
   # List packages installed in system profile. To search, run:
   # $ nix search wget
   environment.systemPackages = with pkgs; [
+    inputs.silent-sddm.packages.x86_64-linux.default
+
     alacritty
     btop
     brightnessctl
@@ -204,9 +217,6 @@ in {
     xwallpaper
     zsh
 
-    # qt5
-    libsForQt5.qt5.qtgraphicaleffects
-
     # cc
     gcc
     gnumake
@@ -215,6 +225,7 @@ in {
   ];
 
   fonts.packages = with pkgs; [
+    redhat-official-fonts # for sddm theme
     nerd-fonts.jetbrains-mono
   ];
 
