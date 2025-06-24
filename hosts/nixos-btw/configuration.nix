@@ -55,18 +55,20 @@ in {
     '';
   };
 
-  services.displayManager.sddm = {
+  services.displayManager.sddm = let
+    silent-sddm = inputs.silent-sddm.packages.x86_64-linux.default;
+  in {
     enable = true;
     package = pkgs.kdePackages.sddm;
     theme = "silent";
     settings = {
       General = {
-        GreeterEnvironment = "QML2_IMPORT_PATH=/run/current-system/sw/share/sddm/themes/silent/components/,QT_IM_MODULE=qtvirtualkeyboard";
+        GreeterEnvironment = "QML2_IMPORT_PATH=${silent-sddm}components/,QT_IM_MODULE=qtvirtualkeyboard";
         InputMethod = "qtvirtualkeyboard";
       };
     };
     extraPackages = [
-      inputs.silent-sddm.packages.x86_64-linux.default
+      silent-sddm
     ];
   };
 
