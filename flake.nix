@@ -32,11 +32,7 @@
     nixosConfigurations.nixos-btw = nixpkgs.lib.nixosSystem {
       specialArgs = {inherit inputs;};
       modules = [
-        ({
-          config,
-          pkgs,
-          ...
-        }: {nixpkgs.overlays = [inputs.blender-bin.overlays.default];})
+        {nixpkgs.overlays = [inputs.blender-bin.overlays.default];}
         ./hosts/nixos-btw/configuration.nix
         inputs.home-manager.nixosModules.default
       ];
