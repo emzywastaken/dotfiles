@@ -170,6 +170,8 @@ in {
     zsh.enable = true;
     nix-ld.enable = true;
     steam.enable = true;
+    steam.gamescopeSession.enable = true;
+    gamemode.enable = true;
     hyprland = {
       enable = true;
       xwayland.enable = true;
