@@ -139,6 +139,9 @@ in {
   # environment.
   home.packages = with pkgs; [
     bat
+    (bottles.override {
+      removeWarningPopup = true;
+    })
     blender_4_4
     discord
     fastfetch
