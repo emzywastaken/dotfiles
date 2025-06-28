@@ -173,7 +173,7 @@ in {
     nerd-fonts.monaspace
 
     (pkgs.writeShellScriptBin "snip" ''
-      ${pkgs.grim}/bin/grim -l 0 -g "$(${pkgs.slurp}/bin/slurp)" - | wl-copy
+      ${pkgs.grim}/bin/grim -l 0 -g "$(${pkgs.slurp}/bin/slurp -w 0)" - | wl-copy
     '')
   ];
 
