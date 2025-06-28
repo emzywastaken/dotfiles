@@ -21,6 +21,7 @@ in {
   boot.loader.grub.efiSupport = true;
   boot.loader.grub.efiInstallAsRemovable = true;
   boot.kernelParams = ["mem_sleep_default=s2idle"];
+  boot.kernelPackages = pkgs.linuxPackages_latest;
 
   networking.hostName = "nixos-btw"; # Define your hostname.
   # Pick only one of the below networking options.
