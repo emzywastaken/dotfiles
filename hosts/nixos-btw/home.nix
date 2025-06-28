@@ -151,6 +151,7 @@ in {
         "--enable-features=TouchpadOverscrollHistoryNavigation"
       ];
     })
+    kdePackages.ark
     kitty
     lazygit
     neofetch
@@ -165,6 +166,7 @@ in {
     tealdeer
     tokei
     tree
+    unrar
     vesktop
     vlc
     yazi
