@@ -51,7 +51,7 @@ in {
     windowManager.qtile.enable = true;
     displayManager.sessionCommands = ''
       xrandr --dpi 127.3
-      xwallpaper --zoom ~/walls/castle.jpg
+      xwallpaper --zoom ~/walls/birds.png
       xset r rate 400 30 &
     '';
   };
