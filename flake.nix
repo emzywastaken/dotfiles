@@ -29,11 +29,11 @@
   in {
     # use "nixos", or your hostname as the name of the configuration
     # it's a better practice than "default" shown in the video
-    nixosConfigurations.nixos-btw = nixpkgs.lib.nixosSystem {
+    nixosConfigurations.aje = nixpkgs.lib.nixosSystem {
       specialArgs = {inherit inputs;};
       modules = [
         {nixpkgs.overlays = [inputs.blender-bin.overlays.default];}
-        ./hosts/nixos-btw/configuration.nix
+        ./hosts/aje/configuration.nix
         inputs.home-manager.nixosModules.default
       ];
     };
