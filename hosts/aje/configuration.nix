@@ -65,7 +65,7 @@ in {
     theme = "silent";
     settings = {
       General = {
-        GreeterEnvironment = "QML2_IMPORT_PATH=${silent-sddm}components/,QT_IM_MODULE=qtvirtualkeyboard";
+        GreeterEnvironment = "QML2_IMPORT_PATH=${silent-sddm}/share/sddm/themes/silent/components/,QT_IM_MODULE=qtvirtualkeyboard";
         InputMethod = "qtvirtualkeyboard";
       };
     };
@@ -229,7 +229,6 @@ in {
   ];
 
   fonts.packages = with pkgs; [
-    redhat-official-fonts # for sddm theme
     nerd-fonts.jetbrains-mono
   ];
 
