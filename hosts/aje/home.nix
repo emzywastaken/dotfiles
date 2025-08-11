@@ -125,6 +125,12 @@ in {
       enable = true;
       createDirectories = true;
     };
+    terminal-exec = {
+      enable = true;
+      settings = {
+        default = ["kitty.desktop"];
+      };
+    };
     mimeApps = {
       enable = true;
       defaultApplications = {
