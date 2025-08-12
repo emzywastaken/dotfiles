@@ -9,11 +9,6 @@
       inputs.nixpkgs.follows = "nixpkgs";
     };
 
-    blender-bin = {
-      url = "github:edolstra/nix-warez?dir=blender";
-      inputs.nixpkgs.follows = "nixpkgs";
-    };
-
     silent-sddm = {
       url = "github:/uiriansan/SilentSDDM";
       inputs.nixpkgs.follows = "nixpkgs";
@@ -32,7 +27,6 @@
     nixosConfigurations.aje = nixpkgs.lib.nixosSystem {
       specialArgs = {inherit inputs;};
       modules = [
-        {nixpkgs.overlays = [inputs.blender-bin.overlays.default];}
         ./hosts/aje/configuration.nix
         inputs.home-manager.nixosModules.default
       ];

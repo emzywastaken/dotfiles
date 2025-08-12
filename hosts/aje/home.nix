@@ -149,7 +149,7 @@ in {
     (bottles.override {
       removeWarningPopup = true;
     })
-    blender_4_4
+    blender
     discord
     fastfetch
     (google-chrome.override {
