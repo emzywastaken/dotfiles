@@ -173,6 +173,7 @@ in {
     steam.enable = true;
     steam.gamescopeSession.enable = true;
     gamemode.enable = true;
+    gamescope.enable = true;
     hyprland = {
       enable = true;
       xwayland.enable = true;
