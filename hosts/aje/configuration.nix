@@ -170,6 +170,7 @@ in {
     firefox.enable = true;
     zsh.enable = true;
     nix-ld.enable = true;
+    virt-manager.enable = true;
     steam.enable = true;
     gamemode.enable = true;
     gamescope.enable = true;
@@ -178,6 +179,8 @@ in {
       xwayland.enable = true;
     };
   };
+
+  virtualisation.libvirtd.enable = true;
 
   environment = {
     sessionVariables = {
