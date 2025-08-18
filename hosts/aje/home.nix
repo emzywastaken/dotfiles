@@ -170,6 +170,7 @@ in {
     razer-cli
     spotify-custom
     tealdeer
+    telegram-desktop
     tokei
     tree
     unrar
