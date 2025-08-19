@@ -28,6 +28,7 @@
       specialArgs = {inherit inputs;};
       modules = [
         ./hosts/aje/configuration.nix
+        ./overlays
         inputs.home-manager.nixosModules.default
       ];
     };
