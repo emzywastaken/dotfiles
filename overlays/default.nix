@@ -1,6 +1,6 @@
 {pkgs, ...}: {
   nixpkgs.overlays = [
-    (_: prev: {
+    (_: _: {
       custom = import ../pkgs {inherit pkgs;};
     })
   ];
