@@ -148,9 +148,7 @@ in {
     custom.spotify
 
     bat
-    (bottles.override {
-      removeWarningPopup = true;
-    })
+    (bottles.override {removeWarningPopup = true;})
     blender
     discord
     fastfetch
