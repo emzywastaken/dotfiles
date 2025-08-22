@@ -239,6 +239,8 @@ in {
   nix.settings.experimental-features = ["nix-command" "flakes"];
   nixpkgs.config.allowUnfree = true;
   nixpkgs.config.cudaSupport = true;
+  # nixd aksed for this
+  nix.nixPath = ["nixpkgs=${inputs.nixpkgs}"];
   nix.settings = {
     extra-substituters = [
       "https://nix-community.cachix.org"
