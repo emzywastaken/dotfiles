@@ -144,47 +144,52 @@ in {
 
   # The home.packages option allows you to install Nix packages into your
   # environment.
-  home.packages = with pkgs; [
-    custom.spotify
+  home.packages = with pkgs;
+    [
+      custom.spotify
 
-    bat
-    (bottles.override {removeWarningPopup = true;})
-    blender
-    discord
-    fastfetch
-    (google-chrome.override {
-      commandLineArgs = [
-        "--enable-features=TouchpadOverscrollHistoryNavigation"
-      ];
-    })
-    kdePackages.ark
-    kitty
-    lazygit
-    neofetch
-    nh
-    nixd # nix lsp
-    obsidian
-    osu-lazer-bin
-    qbittorrent
-    qview
-    razer-cli
-    tealdeer
-    telegram-desktop
-    tokei
-    tree
-    unrar
-    vesktop
-    vlc
-    yazi
-    zathura
-    zvm
+      bat
+      (bottles.override {removeWarningPopup = true;})
+      blender
+      discord
+      fastfetch
+      (google-chrome.override {
+        commandLineArgs = [
+          "--enable-features=TouchpadOverscrollHistoryNavigation"
+        ];
+      })
+      kdePackages.ark
+      kitty
+      lazygit
+      neofetch
+      nh
+      obsidian
+      osu-lazer-bin
+      qbittorrent
+      qview
+      razer-cli
+      tealdeer
+      telegram-desktop
+      tokei
+      tree
+      unrar
+      vesktop
+      vlc
+      yazi
+      zathura
+      zvm
 
-    nerd-fonts.monaspace
+      nerd-fonts.monaspace
 
-    (pkgs.writeShellScriptBin "snip" ''
-      ${pkgs.grim}/bin/grim -l 0 -g "$(${pkgs.slurp}/bin/slurp)" - | wl-copy
-    '')
-  ];
+      (pkgs.writeShellScriptBin "snip" ''
+        ${pkgs.grim}/bin/grim -l 0 -g "$(${pkgs.slurp}/bin/slurp)" - | wl-copy
+      '')
+    ]
+    ++ [ # lsp
+      lua-language-server
+      stylua
+      nixd
+    ];
 
   # Home Manager can also manage your environment variables through
   # 'home.sessionVariables'. These will be explicitly sourced when using a
