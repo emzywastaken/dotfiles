@@ -81,7 +81,6 @@ in {
 
   programs.obs-studio = {
     enable = true;
-    package = pkgs.obs-studio.override {cudaSupport = true;};
   };
 
   home.pointerCursor = {
@@ -185,7 +184,8 @@ in {
         ${pkgs.grim}/bin/grim -l 0 -g "$(${pkgs.slurp}/bin/slurp)" - | wl-copy
       '')
     ]
-    ++ [ # lsp + fmt
+    # lsp + fmt
+    ++ [
       lua-language-server
       stylua
       nixd
