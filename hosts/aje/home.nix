@@ -185,10 +185,11 @@ in {
         ${pkgs.grim}/bin/grim -l 0 -g "$(${pkgs.slurp}/bin/slurp)" - | wl-copy
       '')
     ]
-    ++ [ # lsp
+    ++ [ # lsp + fmt
       lua-language-server
       stylua
       nixd
+      alejandra
     ];
 
   # Home Manager can also manage your environment variables through
