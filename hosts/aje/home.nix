@@ -157,6 +157,7 @@ in {
           "--enable-features=TouchpadOverscrollHistoryNavigation"
         ];
       })
+      gleam
       kdePackages.ark
       kitty
       lazygit
