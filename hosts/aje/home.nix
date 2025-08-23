@@ -157,7 +157,9 @@ in {
           "--enable-features=TouchpadOverscrollHistoryNavigation"
         ];
       })
+      # gleam need erlang
       gleam
+      erlang
       kdePackages.ark
       kitty
       lazygit
