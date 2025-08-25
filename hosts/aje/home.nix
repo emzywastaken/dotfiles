@@ -191,6 +191,7 @@ in {
     ++ [
       lua-language-server
       stylua
+      taplo
       nixd
       alejandra
     ];
