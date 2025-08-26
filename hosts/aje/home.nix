@@ -54,7 +54,8 @@ in {
       confirm_os_window_close = 0;
     };
     keybindings = {
-      "ctrl+alt+enter" = "detach_window";
+      "ctrl+f2" = "detach_tab";
+      "ctrl+f3" = "detach_tab ask";
     };
   };
 
