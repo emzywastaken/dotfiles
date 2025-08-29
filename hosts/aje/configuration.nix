@@ -124,6 +124,7 @@ in {
 
   # Enable CUPS to print documents.
   services.printing.enable = true;
+  services.printing.drivers = with pkgs; [hplip];
 
   # Bluetooth
   hardware.bluetooth.enable = true;
