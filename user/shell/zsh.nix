@@ -44,6 +44,8 @@
 
       eval "$(${pkgs.starship}/bin/starship init zsh)"
       eval "$(${pkgs.fzf}/bin/fzf --zsh)"
+
+      [[ ! -r '/home/emzy/.opam/opam-init/init.zsh' ]] || source '/home/emzy/.opam/opam-init/init.zsh' > /dev/null 2> /dev/null
     '';
   };
 

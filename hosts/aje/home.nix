@@ -170,6 +170,7 @@ in {
       neofetch
       nh
       obsidian
+      opam
       osu-lazer-bin
       qbittorrent
       qview
