@@ -11,6 +11,7 @@
       ll = "ls -lh";
       la = "ls -lAh";
       lvim = "NVIM_APPNAME=lvim nvim";
+      zed = "zeditor";
     };
 
     history = rec {

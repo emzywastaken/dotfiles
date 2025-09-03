@@ -19,7 +19,10 @@ in {
       lib.mkIf cfg.withStarshipPrompt
       "eval (${pkgs.starship}/bin/starship init fish)";
 
-    programs.fish.shellAbbrs.lvim = "NVIM_APPNAME=lvim nvim";
+    programs.fish.shellAbbrs = {
+      lvim = "NVIM_APPNAME=lvim nvim";
+      zed = "zeditor";
+    };
 
     programs.fzf.enable = true;
     programs.fzf.enableFishIntegration = true;
