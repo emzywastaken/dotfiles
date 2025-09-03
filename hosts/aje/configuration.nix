@@ -18,6 +18,7 @@ in {
 
   boot.loader.grub.enable = true;
   boot.loader.grub.device = "nodev";
+  boot.loader.grub.splashImage = null;
   boot.loader.grub.efiSupport = true;
   boot.loader.grub.efiInstallAsRemovable = true;
   boot.kernelParams = ["mem_sleep_default=s2idle"];
