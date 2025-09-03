@@ -168,6 +168,7 @@ in {
       vlc
       yazi
       zathura
+      zed-editor
       zvm
 
       nerd-fonts.monaspace
