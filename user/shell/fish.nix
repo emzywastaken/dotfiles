@@ -15,9 +15,11 @@ in {
   config = lib.mkIf cfg.enable {
     programs.fish.enable = true;
 
-    programs.fish.interactiveShellInit =
-      lib.mkIf cfg.withStarshipPrompt
-      "eval (${pkgs.starship}/bin/starship init fish)";
+    programs.fish.interactiveShellInit = builtins.concatStringsSep "\n" [
+      "test -r '/home/emzy/.opam/opam-init/init.fish' && source '/home/emzy/.opam/opam-init/init.fish' > /dev/null 2> /dev/null; or true"
+      (lib.optionalString cfg.withStarshipPrompt
+        "${pkgs.starship}/bin/starship init fish | source")
+    ];
 
     programs.fish.shellAbbrs = {
       lvim = "NVIM_APPNAME=lvim nvim";
