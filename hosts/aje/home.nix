@@ -18,6 +18,7 @@ in {
 
   modules.fish = {
     enable = true;
+    defaultInteractiveShell = true;
   };
 
   programs.alacritty = {
