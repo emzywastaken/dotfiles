@@ -177,6 +177,16 @@ in {
       (pkgs.writeShellScriptBin "snip" ''
         ${pkgs.grim}/bin/grim -l 0 -g "$(${pkgs.slurp}/bin/slurp)" - | wl-copy
       '')
+
+      (pkgs.writeShellApplication {
+        name = "ns";
+        runtimeInputs = with pkgs; [
+          fzf
+          nix-search-tv
+        ];
+        # prevent IFD, thanks @Michael-C-Buckley
+        text = ''exec "${pkgs.nix-search-tv.src}/nixpkgs.sh" "$@"'';
+      })
     ]
     # lsp + fmt
     ++ [
