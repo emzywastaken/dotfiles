@@ -222,6 +222,7 @@ in {
     };
     # nixd aksed for this
     nixPath = ["nixpkgs=${inputs.nixpkgs}"];
+    package = pkgs.nixVersions.latest;
   };
 
   system.stateVersion = "24.11";
