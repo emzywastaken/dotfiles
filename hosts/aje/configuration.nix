@@ -174,7 +174,6 @@ in {
     brightnessctl
     fd
     fzf
-    gedit
     git
     go
     networkmanagerapplet
