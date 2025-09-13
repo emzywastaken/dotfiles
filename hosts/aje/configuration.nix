@@ -141,6 +141,7 @@ in {
   programs = {
     firefox.enable = true;
     zsh.enable = true;
+    fish.enable = true;
     nix-ld.enable = true;
     virt-manager.enable = true;
     localsend.enable = true;
@@ -192,7 +193,6 @@ in {
     wl-clipboard
     xclip
     xwallpaper
-    zsh
 
     # cc
     gcc
