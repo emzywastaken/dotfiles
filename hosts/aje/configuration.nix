@@ -27,6 +27,7 @@ in {
 
   services.xserver = {
     enable = true;
+    excludePackages = [pkgs.xterm];
     videoDrivers = ["nvidia"];
     windowManager.qtile.enable = true;
     displayManager.sessionCommands = ''
