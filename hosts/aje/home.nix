@@ -200,6 +200,7 @@ in {
       taplo
       nixd
       alejandra
+      statix
     ];
 
   # Let Home Manager install and manage itself.
