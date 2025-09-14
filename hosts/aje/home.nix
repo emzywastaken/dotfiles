@@ -75,6 +75,11 @@ in {
     enable = true;
   };
 
+  programs.direnv = {
+    enable = true;
+    nix-direnv.enable = true;
+  };
+
   home.pointerCursor = {
     x11.enable = true;
     gtk.enable = true;
