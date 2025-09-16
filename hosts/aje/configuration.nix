@@ -30,10 +30,11 @@ in {
     excludePackages = [pkgs.xterm];
     videoDrivers = ["nvidia"];
     windowManager.qtile.enable = true;
+    autoRepeatDelay = 400;
+    autoRepeatInterval = 30;
     displayManager.sessionCommands = ''
       xrandr --dpi 127.3
       xwallpaper --zoom ~/walls/birds.png
-      xset r rate 400 30 &
     '';
   };
 
