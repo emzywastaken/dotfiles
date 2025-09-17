@@ -83,6 +83,9 @@ in {
     };
   };
 
+  # yes yes, download more ram
+  zramSwap.enable = true;
+
   specialisation = {
     gaming.configuration = {
       hardware.nvidia = {
@@ -141,6 +144,7 @@ in {
 
   programs = {
     firefox.enable = true;
+    # firejail.enable = true;
     zsh.enable = true;
     fish.enable = true;
     nix-ld.enable = true;
