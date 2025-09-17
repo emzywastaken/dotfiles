@@ -17,7 +17,7 @@ in {
   boot.loader.grub.efiSupport = true;
   boot.loader.grub.efiInstallAsRemovable = true;
   boot.kernelParams = ["mem_sleep_default=s2idle"];
-  boot.kernelPackages = pkgs.linuxPackages_latest;
+  boot.kernelPackages = pkgs.linuxPackages_zen;
 
   networking.hostName = "aje";
   networking.networkmanager.enable = true;
