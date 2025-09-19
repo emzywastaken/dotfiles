@@ -155,7 +155,7 @@ in {
       })
       gleam
       erlang # gleam need erlang
-      kdePackages.ark
+      file-roller
       kitty
       lazygit
       neofetch
