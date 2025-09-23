@@ -39,7 +39,7 @@ in {
   };
 
   services.displayManager.sddm = let
-    silent-sddm = inputs.silent-sddm.packages.x86_64-linux.default;
+    silent-sddm = inputs.silent-sddm.packages.${pkgs.system}.default;
   in {
     enable = true;
     package = pkgs.kdePackages.sddm;
