@@ -141,7 +141,6 @@ in {
 
   home.packages = with pkgs;
     [
-      nemo-with-extensions
       custom.spotify
 
       bat
