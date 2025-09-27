@@ -80,6 +80,11 @@ in {
     nix-direnv.enable = true;
   };
 
+  wayland.windowManager.hyprland = {
+    enable = true;
+    extraConfig = builtins.readFile ./hypr/hyprland.conf;
+  };
+
   home.pointerCursor = {
     x11.enable = true;
     gtk.enable = true;
