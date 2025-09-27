@@ -28,7 +28,6 @@ in {
   services.xserver = {
     enable = true;
     excludePackages = [pkgs.xterm];
-    videoDrivers = ["nvidia"];
     windowManager.qtile.enable = true;
     autoRepeatDelay = 400;
     autoRepeatInterval = 30;
@@ -66,38 +65,10 @@ in {
         libvdpau-va-gl
       ];
     };
-    nvidia = {
-      modesetting.enable = true;
-      powerManagement.enable = true;
-      powerManagement.finegrained = true;
-      open = true;
-
-      prime = {
-        offload = {
-          enable = true;
-          enableOffloadCmd = true;
-        };
-        intelBusId = "PCI:0:2:0";
-        nvidiaBusId = "PCI:1:0:0";
-      };
-    };
   };
 
   # yes yes, download more ram
   zramSwap.enable = true;
-
-  specialisation = {
-    gaming.configuration = {
-      hardware.nvidia = {
-        powerManagement.finegrained = lib.mkForce false;
-        prime.sync.enable = lib.mkForce true;
-        prime.offload = {
-          enable = lib.mkForce false;
-          enableOffloadCmd = lib.mkForce false;
-        };
-      };
-    };
-  };
 
   services.openssh.enable = true;
 
