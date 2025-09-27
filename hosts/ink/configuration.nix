@@ -20,7 +20,7 @@ in {
   boot.kernelParams = ["mem_sleep_default=s2idle"];
   boot.kernelPackages = pkgs.linuxPackages_zen;
 
-  networking.hostName = "aje";
+  networking.hostName = "ink";
   networking.networkmanager.enable = true;
 
   time.timeZone = "Africa/Lagos";
