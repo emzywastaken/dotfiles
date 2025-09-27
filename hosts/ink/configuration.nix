@@ -16,6 +16,7 @@ in {
   boot.loader.grub.splashImage = null;
   boot.loader.grub.efiSupport = true;
   boot.loader.grub.efiInstallAsRemovable = true;
+  boot.loader.grub.configurationName = "Ink";
   boot.kernelParams = ["mem_sleep_default=s2idle"];
   boot.kernelPackages = pkgs.linuxPackages_zen;
 
