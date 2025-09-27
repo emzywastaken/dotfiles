@@ -32,5 +32,7 @@ in {
       };
       extraConfig = cfg.extraConfig + (readFile ./hyprland.conf);
     };
+    # TODO: Map lines into `exec-once`
+    xdg.configFile."hypr/start.sh".source = ./start.sh;
   };
 }
