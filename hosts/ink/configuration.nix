@@ -115,7 +115,7 @@ in {
 
   programs = {
     firefox.enable = true;
-    firejail.enable = true;
+    # firejail.enable = true;
     zsh.enable = true;
     fish.enable = true;
     nix-ld.enable = true;
