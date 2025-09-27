@@ -27,6 +27,15 @@
       ];
     };
 
+    nixosConfigurations.ink = nixpkgs.lib.nixosSystem {
+      specialArgs = {inherit inputs;};
+      modules = [
+        ./hosts/ink/configuration.nix
+        ./overlays
+        inputs.home-manager.nixosModules.default
+      ];
+    };
+
     formatter.${system} = nixpkgs.legacyPackages.${system}.alejandra;
   };
 }
