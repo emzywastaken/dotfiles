@@ -6,7 +6,8 @@ in {
 
   imports = [
     userModules.zsh
-    userModules.qtile
+    userModules.wms.qtile
+    userModules.wms.hyprland
     userModules.lazygit
     userModules.rofi
     userModules.hm
@@ -16,9 +17,15 @@ in {
 
   home.shell.enableShellIntegration = false;
 
-  modules.fish = {
-    enable = true;
-    defaultInteractiveShell = true;
+  modules = {
+    fish = {
+      enable = true;
+      defaultInteractiveShell = true;
+    };
+    hyprland = {
+      enable = true;
+      monitor.scale = 1.6;
+    };
   };
 
   programs.alacritty = {
@@ -78,11 +85,6 @@ in {
   programs.direnv = {
     enable = true;
     nix-direnv.enable = true;
-  };
-
-  wayland.windowManager.hyprland = {
-    enable = true;
-    extraConfig = builtins.readFile ./hypr/hyprland.conf;
   };
 
   home.pointerCursor = {
