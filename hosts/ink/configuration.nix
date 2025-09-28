@@ -35,8 +35,6 @@
 
   services.openssh.enable = true;
 
-  services.libinput.touchpad.naturalScrolling = true;
-
   users.users.emzy = {
     isNormalUser = true;
     extraGroups = ["wheel"];

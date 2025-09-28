@@ -24,5 +24,6 @@ in {
         xwallpaper --zoom ~/walls/birds.png
       '';
     };
+    services.libinput.touchpad.naturalScrolling = true;
   };
 }
