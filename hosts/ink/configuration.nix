@@ -13,6 +13,10 @@
   modules = {
     grub.enable = true;
     steam.enable = true;
+    tlp = {
+      enable = true;
+      chargeThreshold = 80;
+    };
   };
 
   networking.hostName = "ink";
@@ -67,8 +71,6 @@
   zramSwap.enable = true;
 
   services.openssh.enable = true;
-
-  services.tlp.enable = true;
 
   services.printing.enable = true;
   services.printing.drivers = with pkgs; [hplip];
