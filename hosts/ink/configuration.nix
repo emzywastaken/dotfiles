@@ -38,27 +38,18 @@
     '';
   };
 
-  hardware = {
-    graphics = {
-      enable = true;
-      enable32Bit = true;
-      extraPackages = with pkgs; [
-        intel-media-driver
-        intel-vaapi-driver
-        vpl-gpu-rt # Quicksync
-      ];
-    };
+  hardware.graphics = {
+    extraPackages = with pkgs; [
+      intel-media-driver
+      intel-vaapi-driver
+      vpl-gpu-rt # Quicksync
+    ];
   };
 
   # yes yes, download more ram
   zramSwap.enable = true;
 
   services.openssh.enable = true;
-  hardware.bluetooth.enable = true;
-  services.blueman.enable = true;
-
-  hardware.openrazer.enable = true;
-  hardware.openrazer.users = ["emzy"];
 
   services.libinput.touchpad.naturalScrolling = true;
 
