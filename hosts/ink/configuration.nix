@@ -13,6 +13,7 @@
   modules = {
     grub.enable = true;
     steam.enable = true;
+    sddm.enable = true;
     tlp = {
       enable = true;
       chargeThreshold = 80;
@@ -35,24 +36,6 @@
       xrandr --dpi 127.3
       xwallpaper --zoom ~/walls/birds.png
     '';
-  };
-
-  services.displayManager.sddm = let
-    silent-sddm = inputs.silent-sddm.packages.${pkgs.system}.default;
-  in {
-    enable = true;
-    package = pkgs.kdePackages.sddm;
-    wayland.enable = true;
-    theme = "silent";
-    settings = {
-      General = {
-        GreeterEnvironment = "QML2_IMPORT_PATH=${silent-sddm}/share/sddm/themes/silent/components/,QT_IM_MODULE=qtvirtualkeyboard";
-        InputMethod = "qtvirtualkeyboard";
-      };
-    };
-    extraPackages = [
-      silent-sddm
-    ];
   };
 
   hardware = {
@@ -140,8 +123,6 @@
   xdg.portal.extraPortals = [pkgs.xdg-desktop-portal-gtk];
 
   environment.systemPackages = with pkgs; [
-    inputs.silent-sddm.packages.x86_64-linux.default
-
     alacritty
     btop
     brightnessctl
