@@ -4,7 +4,7 @@
   config,
   ...
 }: let
-  inherit (lib) mkEnableOption mkOption types;
+  inherit (lib) mkEnableOption mkOption types concatLines;
   inherit (builtins) toString readFile;
   cfg = config.modules.hyprland;
 in {
@@ -37,9 +37,10 @@ in {
           "hyprctl setcursor ${config.home.pointerCursor.name} ${toString config.home.pointerCursor.size}"
         ];
       };
-      extraConfig = cfg.extraConfig + (readFile ./hyprland.conf);
+      extraConfig = concatLines [
+        cfg.extraConfig
+        (readFile ./hyprland.conf)
+      ];
     };
-    # TODO: Map lines into `exec-once`
-    xdg.configFile."hypr/start.sh".source = ./start.sh;
   };
 }
