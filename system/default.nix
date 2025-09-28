@@ -8,6 +8,4 @@ in {
     ]
     ++ importDir ./services
     ++ importDir ./apps;
-
-  programs.firefox.enable = true;
 }

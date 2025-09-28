@@ -113,25 +113,6 @@
     };
   };
 
-  programs = {
-    firefox.enable = true;
-    # firejail.enable = true;
-    zsh.enable = true;
-    fish.enable = true;
-    nix-ld.enable = true;
-    virt-manager.enable = true;
-    localsend.enable = true;
-    steam.enable = true;
-    gamemode.enable = true;
-    gamescope.enable = true;
-    hyprland = {
-      enable = true;
-      xwayland.enable = true;
-    };
-  };
-
-  virtualisation.libvirtd.enable = true;
-
   environment = {
     sessionVariables = {
       NIXOS_OZONE_WL = "1";
