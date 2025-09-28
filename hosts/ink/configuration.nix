@@ -109,6 +109,7 @@ in {
     extraSpecialArgs = {inherit inputs;};
     useGlobalPkgs = true;
     useUserPackages = true;
+    backupFileExtension = "bak";
     users = {
       "emzy" = import ./home.nix;
     };
