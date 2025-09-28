@@ -46,9 +46,6 @@
     ];
   };
 
-  # yes yes, download more ram
-  zramSwap.enable = true;
-
   services.openssh.enable = true;
 
   services.libinput.touchpad.naturalScrolling = true;
