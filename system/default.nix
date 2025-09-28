@@ -16,6 +16,11 @@ in {
     ++ importDir ./apps
     ++ importDir ./wms;
 
+  networking.networkmanager.enable = true;
+
+  time.timeZone = "Africa/Lagos";
+  i18n.defaultLocale = "en_US.UTF-8";
+
   environment.sessionVariables = {
     NIXOS_OZONE_WL = "1";
   };
