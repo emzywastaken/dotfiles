@@ -8,5 +8,6 @@ in {
       ./hardware.nix
     ]
     ++ importDir ./services
-    ++ importDir ./apps;
+    ++ importDir ./apps
+    ++ importDir ./wms;
 }

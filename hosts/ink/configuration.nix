@@ -1,5 +1,4 @@
 {
-  lib,
   pkgs,
   config,
   inputs,
@@ -25,18 +24,6 @@
 
   time.timeZone = "Africa/Lagos";
   i18n.defaultLocale = "en_US.UTF-8";
-
-  services.xserver = {
-    enable = true;
-    excludePackages = [pkgs.xterm];
-    windowManager.qtile.enable = true;
-    autoRepeatDelay = 400;
-    autoRepeatInterval = 30;
-    displayManager.sessionCommands = ''
-      xrandr --dpi 127.3
-      xwallpaper --zoom ~/walls/birds.png
-    '';
-  };
 
   hardware.graphics = {
     extraPackages = with pkgs; [
