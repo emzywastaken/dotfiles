@@ -16,7 +16,6 @@ in {
       loader.grub.splashImage = null;
       loader.grub.efiSupport = true;
       loader.grub.efiInstallAsRemovable = true;
-      kernelParams = ["mem_sleep_default=s2idle"];
       kernelPackages = pkgs.linuxPackages_zen;
     };
   };
