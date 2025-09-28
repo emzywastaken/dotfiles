@@ -5,7 +5,6 @@
 
   modules.hyprland = {
     enable = true;
-    monitorScale = 1.6;
   };
 
   home.packages = [
