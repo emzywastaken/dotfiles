@@ -16,6 +16,10 @@ in {
     ++ importDir ./apps
     ++ importDir ./wms;
 
+  environment.sessionVariables = {
+    NIXOS_OZONE_WL = "1";
+  };
+
   nixpkgs.config.allowUnfree = true;
   nix = {
     settings = {
