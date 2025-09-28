@@ -30,7 +30,7 @@ in {
     };
 
     environment.systemPackages = [
-      inputs.silent-sddm.packages.x86_64-linux.default
+      inputs.silent-sddm.packages.${pkgs.system}.default
     ];
   };
 }
