@@ -1,6 +1,7 @@
 {
   lib,
   pkgs,
+  config,
   inputs,
   ...
 }: let
@@ -230,5 +231,6 @@ in {
     package = pkgs.nixVersions.latest;
   };
 
+  system.nixos.tags = ["${config.networking.hostName}"];
   system.stateVersion = "24.11";
 }
