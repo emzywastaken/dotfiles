@@ -186,7 +186,6 @@ in {
   fonts.fontconfig.subpixel.rgba = "rgb";
 
   nixpkgs.config.allowUnfree = true;
-  nixpkgs.config.cudaSupport = true;
   nix = {
     settings = {
       extra-substituters = [
