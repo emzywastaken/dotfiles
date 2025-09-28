@@ -33,8 +33,6 @@
     ];
   };
 
-  services.openssh.enable = true;
-
   users.users.emzy = {
     isNormalUser = true;
     extraGroups = ["wheel"];
