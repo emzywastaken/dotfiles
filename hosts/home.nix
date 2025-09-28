@@ -1,12 +1,9 @@
-{pkgs, ...}: let
-  userModules = import ../user;
-in {
+{pkgs, ...}: {
   home.username = "emzy";
   home.homeDirectory = "/home/emzy";
 
   imports = [
-    userModules.rofi
-    userModules.hm
+    ../user
   ];
 
   home.stateVersion = "24.11";

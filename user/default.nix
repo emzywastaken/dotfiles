@@ -1,17 +1,14 @@
 {
-  hm = {
-    imports = [
-      ./shell
-      ./lazygit
-      ./wms/hyprland
-      ./wms/qtile
-    ];
+  imports = [
+    ./shell
+    ./lazygit
+    ./wms/hyprland
+    ./wms/qtile
+    ./rofi/rofi.nix
+  ];
 
-    modules = {
-      qtile.enable = true;
-      lazygit.enable = true;
-    };
+  modules = {
+    qtile.enable = true;
+    lazygit.enable = true;
   };
-
-  rofi = ./rofi/rofi.nix;
 }
