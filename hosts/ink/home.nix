@@ -24,7 +24,7 @@ in {
     };
     hyprland = {
       enable = true;
-      monitor.scale = 1.6;
+      monitorScale = 1.6;
     };
   };
 

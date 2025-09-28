@@ -11,7 +11,7 @@ in {
   options = {
     modules.hyprland = {
       enable = mkEnableOption "whether to enable hyprland";
-      monitor.scale = mkOption {
+      monitorScale = mkOption {
         type = types.either types.float types.str;
         default = "auto";
         description = "Monitor scaling";
@@ -28,7 +28,14 @@ in {
     wayland.windowManager.hyprland = {
       enable = true;
       settings = {
-        monitor = ",preferred,auto,${toString cfg.monitor.scale}";
+        monitor = ",preferred,auto,${toString cfg.monitorScale}";
+        exec-once = [
+          "swww-daemon"
+          "waybar"
+          "nm-applet"
+          "dunst"
+          "hyprctl setcursor ${config.home.pointerCursor.name} ${toString config.home.pointerCursor.size}"
+        ];
       };
       extraConfig = cfg.extraConfig + (readFile ./hyprland.conf);
     };
