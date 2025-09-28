@@ -5,7 +5,6 @@ in {
   home.homeDirectory = "/home/emzy";
 
   imports = [
-    userModules.lazygit
     userModules.rofi
     userModules.hm
   ];
@@ -161,7 +160,6 @@ in {
       erlang # gleam need erlang
       file-roller
       kitty
-      lazygit
       neofetch
       nh
       obsidian

@@ -1,0 +1,24 @@
+{
+  pkgs,
+  lib,
+  config,
+  ...
+}: let
+  cfg = config.modules.lazygit;
+in {
+  options = {
+    modules.lazygit.enable = lib.mkEnableOption "Enable lazygit";
+  };
+
+  config = lib.mkIf cfg.enable {
+    programs.lazygit = {
+      enable = true;
+      settings = {
+        git.paging = {
+          colorArg = "always";
+          pager = "${pkgs.delta}/bin/delta --dark --paging=never";
+        };
+      };
+    };
+  };
+}
