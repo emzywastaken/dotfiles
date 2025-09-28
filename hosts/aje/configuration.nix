@@ -83,9 +83,6 @@
 
   services.tlp.enable = true;
 
-  services.printing.enable = true;
-  services.printing.drivers = with pkgs; [hplip];
-
   hardware.bluetooth.enable = true;
   services.blueman.enable = true;
 
