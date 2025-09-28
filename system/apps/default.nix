@@ -29,8 +29,6 @@
     vim
     wget
     wl-clipboard
-    xclip # moave to x11 related module
-    xwallpaper
 
     # cc
     gcc
