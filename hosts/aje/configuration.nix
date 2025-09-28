@@ -14,6 +14,7 @@
     sddm.enable = true;
     grub.enable = true;
   };
+
   boot.kernelParams = ["mem_sleep_default=s2idle"];
 
   networking.hostName = "aje";
@@ -90,15 +91,6 @@
 
   hardware.openrazer.enable = true;
   hardware.openrazer.users = ["emzy"];
-
-  security.rtkit.enable = true;
-  services.pipewire = {
-    enable = true;
-    alsa.enable = true;
-    alsa.support32Bit = true;
-    pulse.enable = true;
-    jack.enable = true;
-  };
 
   services.libinput.touchpad.naturalScrolling = true;
 

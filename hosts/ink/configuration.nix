@@ -64,15 +64,6 @@
   hardware.openrazer.enable = true;
   hardware.openrazer.users = ["emzy"];
 
-  security.rtkit.enable = true;
-  services.pipewire = {
-    enable = true;
-    alsa.enable = true;
-    alsa.support32Bit = true;
-    pulse.enable = true;
-    jack.enable = true;
-  };
-
   services.libinput.touchpad.naturalScrolling = true;
 
   # needed for store VS Code auth token
