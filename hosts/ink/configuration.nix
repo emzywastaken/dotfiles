@@ -94,36 +94,6 @@
   xdg.portal.enable = true;
   xdg.portal.extraPortals = [pkgs.xdg-desktop-portal-gtk];
 
-  environment.systemPackages = with pkgs; [
-    alacritty
-    btop
-    brightnessctl
-    fd
-    fzf
-    git
-    go
-    networkmanagerapplet
-    nodejs_22
-    pavucontrol
-    psmisc # killall
-    python3
-    ripgrep
-    rustup
-    swww
-    unzip
-    vim
-    wget
-    wl-clipboard
-    xclip
-    xwallpaper
-
-    # cc
-    gcc
-    gnumake
-    cmake
-    man-pages
-  ];
-
   fonts.packages = with pkgs; [
     liberation_ttf
     nerd-fonts.jetbrains-mono
