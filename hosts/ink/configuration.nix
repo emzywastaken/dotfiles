@@ -29,24 +29,5 @@
     ];
   };
 
-  users.users.emzy = {
-    isNormalUser = true;
-    extraGroups = ["wheel"];
-    shell = pkgs.zsh;
-  };
-
-  home-manager = {
-    extraSpecialArgs = {inherit inputs;};
-    useGlobalPkgs = true;
-    useUserPackages = true;
-    backupFileExtension = "bak";
-    users = {
-      "emzy" = import ./home.nix;
-    };
-  };
-
-  xdg.portal.enable = true;
-  xdg.portal.extraPortals = [pkgs.xdg-desktop-portal-gtk];
-
   system.nixos.tags = ["${config.networking.hostName}"];
 }
