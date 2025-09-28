@@ -17,6 +17,9 @@
   boot.loader.grub.efiInstallAsRemovable = true;
   boot.kernelParams = ["mem_sleep_default=s2idle"];
   boot.kernelPackages = pkgs.linuxPackages_zen;
+  modules = {
+    steam.enable = true;
+  };
 
   networking.hostName = "ink";
   networking.networkmanager.enable = true;
@@ -121,9 +124,6 @@
     nix-ld.enable = true;
     virt-manager.enable = true;
     localsend.enable = true;
-    steam.enable = true;
-    gamemode.enable = true;
-    gamescope.enable = true;
     hyprland = {
       enable = true;
       xwayland.enable = true;
