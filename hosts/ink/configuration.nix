@@ -13,6 +13,7 @@
     grub.enable = true;
     steam.enable = true;
     sddm.enable = true;
+    wms.hyprland.enable = true;
     tlp = {
       enable = true;
       chargeThreshold = 80;

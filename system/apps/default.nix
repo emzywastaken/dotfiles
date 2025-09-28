@@ -7,14 +7,7 @@
     fish.enable = true;
     nix-ld.enable = true;
     localsend.enable = true;
-    hyprland = {
-      enable = true;
-      xwayland.enable = true;
-    };
   };
-
-  xdg.portal.enable = true;
-  xdg.portal.extraPortals = [pkgs.xdg-desktop-portal-gtk];
 
   environment.systemPackages = with pkgs; [
     alacritty
