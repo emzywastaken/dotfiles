@@ -1,4 +1,4 @@
-{pkgs, ...}: {
+_: {
   imports = [
     ../home.nix # Shared config
   ];
@@ -8,5 +8,9 @@
       enable = true;
       monitorScale = 1.6;
     };
+  };
+
+  wayland.windowManager.hyprland = {
+    settings.exec-once = ["brightnessctl s 20%"];
   };
 }
