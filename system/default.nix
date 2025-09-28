@@ -5,6 +5,7 @@ in {
   imports =
     [
       ./boot.nix
+      ./fonts.nix
       ./hardware.nix
     ]
     ++ importDir ./services
