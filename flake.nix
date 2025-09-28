@@ -17,24 +17,19 @@
 
   outputs = {nixpkgs, ...} @ inputs: let
     system = "x86_64-linux";
+    mkNixosConfig = hostname:
+      nixpkgs.lib.nixosSystem {
+        specialArgs = {inherit inputs;};
+        modules = [
+          ./hosts/${hostname}
+          ./overlays
+          inputs.home-manager.nixosModules.default
+        ];
+      };
   in {
-    nixosConfigurations.aje = nixpkgs.lib.nixosSystem {
-      specialArgs = {inherit inputs;};
-      modules = [
-        ./hosts/aje/configuration.nix
-        ./overlays
-        inputs.home-manager.nixosModules.default
-      ];
-    };
+    nixosConfigurations.aje = mkNixosConfig "aje";
 
-    nixosConfigurations.ink = nixpkgs.lib.nixosSystem {
-      specialArgs = {inherit inputs;};
-      modules = [
-        ./hosts/ink/configuration.nix
-        ./overlays
-        inputs.home-manager.nixosModules.default
-      ];
-    };
+    nixosConfigurations.ink = mkNixosConfig "ink";
 
     formatter.${system} = nixpkgs.legacyPackages.${system}.alejandra;
   };
