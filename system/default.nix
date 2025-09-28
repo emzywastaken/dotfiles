@@ -4,4 +4,6 @@
     ./apps/steam.nix
     ./boot.nix
   ];
+
+  programs.firefox.enable = true;
 }

@@ -111,7 +111,6 @@
   };
 
   programs = {
-    firefox.enable = true;
     # firejail.enable = true;
     zsh.enable = true;
     fish.enable = true;
