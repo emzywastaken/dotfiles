@@ -65,29 +65,5 @@
   xdg.portal.enable = true;
   xdg.portal.extraPortals = [pkgs.xdg-desktop-portal-gtk];
 
-  fonts.packages = with pkgs; [
-    liberation_ttf
-    nerd-fonts.jetbrains-mono
-  ];
-  fonts.fontconfig.subpixel.rgba = "rgb";
-
-  nixpkgs.config.allowUnfree = true;
-  nix = {
-    settings = {
-      extra-substituters = [
-        "https://nix-community.cachix.org"
-      ];
-
-      extra-trusted-public-keys = [
-        "nix-community.cachix.org-1:mB9FSh9qf2dCimDSUo8Zy7bkq5CX+/rkCWyvRCYg3Fs="
-      ];
-      experimental-features = ["nix-command" "flakes"];
-    };
-    # nixd aksed for this
-    nixPath = ["nixpkgs=${inputs.nixpkgs}"];
-    package = pkgs.nixVersions.latest;
-  };
-
   system.nixos.tags = ["${config.networking.hostName}"];
-  system.stateVersion = "24.11";
 }
