@@ -191,6 +191,18 @@ in {
         ${pkgs.grim}/bin/grim -l 0 -g "$(${pkgs.slurp}/bin/slurp)" - | wl-copy
       '')
 
+      (pkgs.writeShellScriptBin "ulink" ''
+        for arg in "$@"; do
+            if [[ -L "$arg" ]]; then
+                cp --remove-destination "$(readlink -f "$arg")" "$arg"
+                chmod u+w "$arg"
+                echo "$arg is now unlinked and writable"
+            else
+                echo "Skipping: $arg is not a symlink"
+            fi
+        done
+      '')
+
       (pkgs.writeShellApplication {
         name = "ns";
         runtimeInputs = with pkgs; [
