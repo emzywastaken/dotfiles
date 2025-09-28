@@ -6,7 +6,7 @@
   cfg = config.modules.tlp;
 in {
   options.modules.tlp = {
-    enable = lib.mkEnableOption "Enable tlp";
+    enable = lib.mkEnableOption "tlp";
     chargeThreshold = lib.mkOption {
       type = lib.types.ints.between 1 100;
       default = 100;

@@ -6,7 +6,7 @@
   cfg = config.modules.steam;
 in {
   options.modules = {
-    steam.enable = lib.mkEnableOption "Enable steam with gamescope and gamemode optimization";
+    steam.enable = lib.mkEnableOption "steam with gamescope and gamemode optimizations";
   };
   config = lib.mkIf cfg.enable {
     programs = {

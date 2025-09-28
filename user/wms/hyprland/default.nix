@@ -10,7 +10,7 @@
 in {
   options = {
     modules.hyprland = {
-      enable = mkEnableOption "whether to enable hyprland";
+      enable = mkEnableOption "hyprland";
       monitorScale = mkOption {
         type = types.either types.float types.str;
         default = "auto";

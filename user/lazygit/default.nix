@@ -7,7 +7,7 @@
   cfg = config.modules.lazygit;
 in {
   options = {
-    modules.lazygit.enable = lib.mkEnableOption "Enable lazygit";
+    modules.lazygit.enable = lib.mkEnableOption "lazygit";
   };
 
   config = lib.mkIf cfg.enable {

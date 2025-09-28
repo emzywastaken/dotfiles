@@ -7,9 +7,9 @@
   cfg = config.modules.fish;
 in {
   options.modules = {
-    fish.enable = lib.mkEnableOption "Whether to enable custom fish module";
-    fish.withStarshipPrompt = lib.mkEnableOption "Configure prompt with starship";
-    fish.defaultInteractiveShell = lib.mkEnableOption "Whether to make fish the default interactive shell";
+    fish.enable = lib.mkEnableOption "custom fish module";
+    fish.withStarshipPrompt = lib.mkEnableOption "starship prompt";
+    fish.defaultInteractiveShell = lib.mkEnableOption "fish as the default interactive shell";
   };
 
   config = lib.mkIf cfg.enable {

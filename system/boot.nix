@@ -7,7 +7,7 @@
   cfg = config.modules.grub;
 in {
   options.modules = {
-    grub.enable = lib.mkEnableOption "Enable grub";
+    grub.enable = lib.mkEnableOption "grub";
   };
   config = lib.mkIf cfg.enable {
     boot = {

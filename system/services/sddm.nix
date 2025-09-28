@@ -8,7 +8,7 @@
   cfg = config.modules.sddm;
 in {
   options.modules.sddm = {
-    enable = lib.mkEnableOption "Enable sddm";
+    enable = lib.mkEnableOption "sddm";
   };
   config = lib.mkIf cfg.enable {
     services.displayManager.sddm = let

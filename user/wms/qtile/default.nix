@@ -6,7 +6,7 @@
   cfg = config.modules.qtile;
 in {
   options = {
-    modules.qtile.enable = lib.mkEnableOption "whether to enable qtile";
+    modules.qtile.enable = lib.mkEnableOption "qtile";
   };
 
   config = lib.mkIf cfg.enable {
