@@ -157,7 +157,6 @@
     swww
     unzip
     vim
-    waybar
     wget
     wl-clipboard
     xclip

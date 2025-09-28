@@ -42,5 +42,10 @@ in {
         (readFile ./hyprland.conf)
       ];
     };
+
+    # services.swww.enable = true;
+    home.packages = [
+      pkgs.waybar
+    ];
   };
 }
