@@ -16,6 +16,11 @@ in {
         default = "auto";
         description = "Monitor scaling";
       };
+      startupCommands = mkOption {
+        type = types.listOf types.str;
+        default = [];
+        description = "commands to be added to exec-once";
+      };
       extraConfig = mkOption {
         type = types.lines;
         default = "";
@@ -29,13 +34,15 @@ in {
       enable = true;
       settings = {
         monitor = ",preferred,auto,${toString cfg.monitorScale}";
-        exec-once = [
-          "swww-daemon"
-          "waybar"
-          "nm-applet"
-          "dunst"
-          "hyprctl setcursor ${config.home.pointerCursor.name} ${toString config.home.pointerCursor.size}"
-        ];
+        exec-once =
+          [
+            "swww-daemon"
+            "waybar"
+            "nm-applet"
+            "dunst"
+            "hyprctl setcursor ${config.home.pointerCursor.name} ${toString config.home.pointerCursor.size}"
+          ]
+          ++ cfg.startupCommands;
       };
       extraConfig = concatLines [
         cfg.extraConfig
