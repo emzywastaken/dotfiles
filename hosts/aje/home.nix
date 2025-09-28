@@ -5,7 +5,6 @@ in {
   home.homeDirectory = "/home/emzy";
 
   imports = [
-    userModules.zsh
     userModules.lazygit
     userModules.rofi
     userModules.hm
