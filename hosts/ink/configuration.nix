@@ -10,14 +10,8 @@
     ../../system
   ];
 
-  boot.loader.grub.enable = true;
-  boot.loader.grub.device = "nodev";
-  boot.loader.grub.splashImage = null;
-  boot.loader.grub.efiSupport = true;
-  boot.loader.grub.efiInstallAsRemovable = true;
-  boot.kernelParams = ["mem_sleep_default=s2idle"];
-  boot.kernelPackages = pkgs.linuxPackages_zen;
   modules = {
+    grub.enable = true;
     steam.enable = true;
   };
 
