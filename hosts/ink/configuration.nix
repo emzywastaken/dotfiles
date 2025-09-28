@@ -50,10 +50,6 @@
 
   services.libinput.touchpad.naturalScrolling = true;
 
-  # needed for store VS Code auth token
-  services.gnome.gnome-keyring.enable = true;
-  security.pam.services.login.enableGnomeKeyring = true;
-
   users.users.emzy = {
     isNormalUser = true;
     extraGroups = ["wheel"];
