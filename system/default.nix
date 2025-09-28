@@ -10,6 +10,7 @@ in {
     [
       ./boot.nix
       ./fonts.nix
+      ./users.nix
       ./hardware.nix
     ]
     ++ importDir ./services

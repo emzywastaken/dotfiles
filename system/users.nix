@@ -1,5 +1,6 @@
 {
   pkgs,
+  config,
   inputs,
   ...
 }: {
@@ -15,7 +16,7 @@
     useUserPackages = true;
     backupFileExtension = "bak";
     users = {
-      "emzy" = import ./home.nix;
+      "emzy" = import ../hosts/${config.networking.hostName}/home.nix;
     };
   };
 }
