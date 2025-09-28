@@ -4,12 +4,10 @@
   config,
   inputs,
   ...
-}: let
-  systemModules = import ../../system;
-in {
+}: {
   imports = [
     ./hardware-configuration.nix
-    systemModules.thunar
+    ../../system
   ];
 
   boot.loader.grub.enable = true;

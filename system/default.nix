@@ -1,3 +1,5 @@
 {
-  thunar = ./thunar;
+  imports = [
+    ./thunar
+  ];
 }
