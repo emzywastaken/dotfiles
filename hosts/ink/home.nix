@@ -6,8 +6,6 @@ in {
 
   imports = [
     userModules.zsh
-    userModules.wms.qtile
-    userModules.wms.hyprland
     userModules.lazygit
     userModules.rofi
     userModules.hm
