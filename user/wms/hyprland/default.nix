@@ -16,11 +16,14 @@ in {
         default = "auto";
         description = "Monitor scaling";
       };
-      # TODO: make this a function or t
       startupCommands = mkOption {
-        type = types.listOf types.str;
-        default = [];
-        description = "commands to be added to exec-once";
+        type = with types; either (listOf str) (functionTo (listOf str));
+        default = lib.const [];
+        description = ''
+          Extra commands to add to `exec-once` or an overriding function.
+          Can be provided either as a list of strings added to `exec-once`
+          or as a function that takes in the default command list and returns a new list.
+        '';
       };
       extraConfig = mkOption {
         type = types.lines;
@@ -33,9 +36,8 @@ in {
   config = lib.mkIf cfg.enable {
     wayland.windowManager.hyprland = {
       enable = true;
-      settings = {
-        monitor = ",preferred,auto,${toString cfg.monitorScale}";
-        exec-once =
+      settings = let
+        default =
           # TODO: use services
           [
             "swww-daemon"
@@ -43,8 +45,13 @@ in {
             "nm-applet"
             "dunst"
             "hyprctl setcursor ${config.home.pointerCursor.name} ${toString config.home.pointerCursor.size}"
-          ]
-          ++ cfg.startupCommands;
+          ];
+      in {
+        monitor = ",preferred,auto,${toString cfg.monitorScale}";
+        exec-once =
+          if lib.isFunction cfg.startupCommands
+          then cfg.startupCommands default
+          else default ++ cfg.startupCommands;
       };
       extraConfig = concatLines [
         cfg.extraConfig
