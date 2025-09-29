@@ -16,6 +16,7 @@ in {
         default = "auto";
         description = "Monitor scaling";
       };
+      # TODO: make this a function or t
       startupCommands = mkOption {
         type = types.listOf types.str;
         default = [];
