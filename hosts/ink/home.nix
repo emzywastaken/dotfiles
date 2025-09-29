@@ -1,4 +1,4 @@
-_: {
+{lib, ...}: {
   imports = [
     ../home.nix # Shared config
   ];
@@ -7,10 +7,7 @@ _: {
     hyprland = {
       enable = true;
       monitorScale = 1.6;
+      startupCommands = prev: lib.remove "waybar" prev ++ ["brightnessctl s 20%"];
     };
-  };
-
-  wayland.windowManager.hyprland = {
-    settings.exec-once = ["brightnessctl s 20%"];
   };
 }
