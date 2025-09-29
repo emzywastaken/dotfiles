@@ -32,4 +32,5 @@
   };
 
   system.nixos.tags = ["${config.networking.hostName}"];
+  nixpkgs.config.cudaSupport = true;
 }
