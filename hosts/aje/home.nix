@@ -5,13 +5,10 @@
 
   modules.hyprland = {
     enable = true;
+    startupCommands = ["brightnessctl s 20%"];
   };
 
   home.packages = [
     pkgs.blender
   ];
-
-  wayland.windowManager.hyprland = {
-    settings.exec-once = ["brightnessctl s 20%"];
-  };
 }
