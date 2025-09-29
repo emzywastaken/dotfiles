@@ -23,6 +23,7 @@
         modules = [
           ./hosts/${hostname}
           ./overlays
+          ./system
           inputs.home-manager.nixosModules.default
         ];
       };
