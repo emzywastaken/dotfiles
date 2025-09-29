@@ -35,6 +35,7 @@ in {
       settings = {
         monitor = ",preferred,auto,${toString cfg.monitorScale}";
         exec-once =
+          # TODO: use services
           [
             "swww-daemon"
             "waybar"
