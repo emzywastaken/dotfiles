@@ -10,4 +10,8 @@
   home.packages = [
     pkgs.blender
   ];
+
+  wayland.windowManager.hyprland = {
+    settings.exec-once = ["brightnessctl s 20%"];
+  };
 }
