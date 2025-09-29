@@ -7,7 +7,7 @@
 in {
   options.modules.nvidia = {
     enable = lib.mkEnableOption "nvidia drivers with prime";
-    withSpecialization = lib.mkEnableOption "gaming specialization";
+    withSpecialisation = lib.mkEnableOption "gaming specialization";
   };
   config = lib.mkIf cfg.enable {
     services.xserver = {
@@ -31,7 +31,7 @@ in {
       };
     };
 
-    specialisation = lib.mkIf cfg.withSpecialization {
+    specialisation = lib.mkIf cfg.withSpecialisation {
       gaming.configuration = {
         hardware.nvidia = {
           powerManagement.finegrained = lib.mkForce false;

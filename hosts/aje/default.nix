@@ -15,7 +15,7 @@
     tlp.enable = true;
     nvidia = {
       enable = true;
-      withSpecialization = true;
+      withSpecialisation = true;
     };
   };
 
