@@ -158,6 +158,8 @@ in {
 
         windowrule = [
           "float, class:xdg-desktop-portal-gtk"
+          # Bitwarden popup
+          "float, class:chrome-nngceckbapebfimnlniiiahkandclblb-Default"
           "immediate, class:^(cs2)$"
           # Ignore maximize requests from apps.
           "suppressevent maximize, class:.*"
