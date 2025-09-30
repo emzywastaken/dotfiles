@@ -17,7 +17,7 @@
 
   outputs = {nixpkgs, ...} @ inputs: let
     system = "x86_64-linux";
-    mkNixosConfig = hostname:
+    mkSystem = hostname:
       nixpkgs.lib.nixosSystem {
         specialArgs = {inherit inputs;};
         modules = [
@@ -28,9 +28,9 @@
         ];
       };
   in {
-    nixosConfigurations.aje = mkNixosConfig "aje";
+    nixosConfigurations.aje = mkSystem "aje";
 
-    nixosConfigurations.ink = mkNixosConfig "ink";
+    nixosConfigurations.ink = mkSystem "ink";
 
     formatter.${system} = nixpkgs.legacyPackages.${system}.alejandra;
   };
