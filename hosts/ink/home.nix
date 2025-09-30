@@ -10,4 +10,8 @@
       startupCommands = prev: lib.remove "waybar" prev ++ ["brightnessctl s 20%"];
     };
   };
+
+  wayland.windowManager.hyprland.settings = {
+    xwayland.force_zero_scaling = true;
+  };
 }
