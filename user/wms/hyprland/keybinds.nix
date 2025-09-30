@@ -1,10 +1,24 @@
 {
+  pkgs,
   lib,
   config,
   ...
 }: {
   config = lib.mkIf config.modules.hyprland.enable {
-    wayland.windowManager.hyprland.settings = {
+    wayland.windowManager.hyprland.settings = let
+      # seems hacky
+      t = pkgs.writeShellScriptBin "toggle-fullcharge" ''
+        export SHELL=/bin/sh
+        pkexec $SHELL <<'EOF'
+        current_end=$(tlp-stat -b | awk '/charge_control/ {print $3}')
+        if [ "$current_end" = "100" ]; then
+          tlp setcharge
+        else
+          tlp fullcharge
+        fi
+        EOF
+      '';
+    in {
       "$mainMod" = "SUPER";
       "$menu" = "rofi -show drun -show-icons";
       "$terminal" = "kitty";
@@ -14,6 +28,8 @@
         "$mainMod, Print, exec, snip"
         # Togge waybar
         "$mainMod, B, exec, pkill waybar || waybar"
+        # Toggle battery charge limit
+        "$mainMod ALT, B, exec, ${lib.getExe t}"
 
         # Base binds
         "$mainMod, Return, exec, $terminal"
