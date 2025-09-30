@@ -37,15 +37,10 @@ in {
     wayland.windowManager.hyprland = {
       enable = true;
       settings = let
-        default =
-          # TODO: use services
-          [
-            "swww-daemon"
-            "waybar"
-            "nm-applet"
-            "dunst"
-            "hyprctl setcursor ${config.home.pointerCursor.name} ${toString config.home.pointerCursor.size}"
-          ];
+        default = [
+          "waybar"
+          "hyprctl setcursor ${config.home.pointerCursor.name} ${toString config.home.pointerCursor.size}"
+        ];
       in {
         monitor = ",preferred,auto,${toString cfg.monitorScale}";
         exec-once =
@@ -65,7 +60,7 @@ in {
       ];
     };
 
-    # services.swww.enable = true;
+    services.swww.enable = true;
     home.packages = [
       pkgs.waybar
     ];
