@@ -31,7 +31,7 @@ in {
 
     # make fish default interactive shell
     home.sessionVariables = lib.mkIf cfg.defaultInteractiveShell {
-      SHELL = "fish";
+      SHELL = "${lib.getExe pkgs.fish}";
     };
 
     programs.kitty = lib.mkIf cfg.defaultInteractiveShell {
