@@ -52,6 +52,12 @@ in {
           if lib.isFunction cfg.startupCommands
           then cfg.startupCommands default
           else default ++ cfg.startupCommands;
+
+        "$mainMod" = "SUPER";
+        bind = [
+          # Togge waybar
+          "$mainMod, B, exec, pkill waybar || waybar"
+        ];
       };
       extraConfig = concatLines [
         cfg.extraConfig
