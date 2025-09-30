@@ -1,9 +1,8 @@
 {
   imports = [
+    ./wms
     ./shell
     ./lazygit
-    ./wms/hyprland
-    ./wms/qtile
     ./rofi/rofi.nix
   ];
 

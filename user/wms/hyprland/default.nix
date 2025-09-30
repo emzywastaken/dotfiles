@@ -61,6 +61,8 @@ in {
     };
 
     services.swww.enable = true;
+    services.hyprpolkitagent.enable = true;
+
     home.packages = [
       pkgs.waybar
     ];

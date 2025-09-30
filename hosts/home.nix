@@ -97,18 +97,6 @@
     style.name = "adwaita-dark";
   };
 
-  services.dunst = {
-    enable = true;
-    settings = {
-      global = {
-        corner_radius = 10;
-      };
-    };
-  };
-  services.network-manager-applet.enable = true;
-  services.blueman-applet.enable = true;
-  services.hyprpolkitagent.enable = true;
-
   xdg = {
     enable = true;
     userDirs = {
