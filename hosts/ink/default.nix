@@ -12,6 +12,7 @@
     sddm.enable = true;
     steam.enable = true;
     wms.hyprland.enable = true;
+    # TODO: compare with asusctl profiles
     tlp = {
       enable = true;
       chargeThreshold = 80;
