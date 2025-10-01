@@ -15,6 +15,7 @@
     useGlobalPkgs = true;
     useUserPackages = true;
     backupFileExtension = "bak";
+    overwriteBackup = true;
     users = {
       "emzy" = import ../hosts/${config.networking.hostName}/home.nix;
     };
