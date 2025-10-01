@@ -1,5 +1,6 @@
 {
   pkgs,
+  lib,
   config,
   ...
 }: {
@@ -30,6 +31,13 @@
   };
 
   environment.sessionVariables = {LIBVA_DRIVER_NAME = "iHD";};
+
+  security.wrappers.btop = {
+    owner = "root";
+    group = "root";
+    source = lib.getExe pkgs.btop;
+    capabilities = "cap_perfmon,cap_dac_read_search+ep";
+  };
 
   system.nixos.tags = ["${config.networking.hostName}"];
 }
