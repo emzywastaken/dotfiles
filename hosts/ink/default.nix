@@ -29,5 +29,7 @@
     ];
   };
 
+  environment.sessionVariables = {LIBVA_DRIVER_NAME = "iHD";};
+
   system.nixos.tags = ["${config.networking.hostName}"];
 }

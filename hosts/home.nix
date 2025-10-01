@@ -132,6 +132,9 @@
       (google-chrome.override {
         commandLineArgs = [
           "--enable-features=TouchpadOverscrollHistoryNavigation"
+          "--enable-features=AcceleratedVideoEncoder"
+          "--ignore-gpu-blocklist"
+          "--enable-zero-copy"
         ];
       })
       gleam
