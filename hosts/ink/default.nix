@@ -14,10 +14,10 @@
     steam.enable = true;
     wms.hyprland.enable = true;
     # TODO: compare with asusctl profiles
-    # tlp = {
-    #   enable = true;
-    #   chargeThreshold = 80;
-    # };
+    tlp = {
+      enable = true;
+      chargeThreshold = 80;
+    };
   };
 
   networking.hostName = "ink";
@@ -31,7 +31,7 @@
   };
 
   powerManagement.powertop.enable = true;
-  services.power-profiles-daemon.enable = true;
+  services.auto-cpufreq.enable = true;
 
   environment.sessionVariables = {LIBVA_DRIVER_NAME = "iHD";};
 
