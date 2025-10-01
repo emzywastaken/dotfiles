@@ -131,8 +131,10 @@
       fastfetch
       (google-chrome.override {
         commandLineArgs = [
-          "--enable-features=TouchpadOverscrollHistoryNavigation"
-          "--enable-features=AcceleratedVideoEncoder"
+          (lib.concatStringsSep "," [
+            "--enable-features=TouchpadOverscrollHistoryNavigation"
+            "AcceleratedVideoEncoder"
+          ])
           "--ignore-gpu-blocklist"
           "--enable-zero-copy"
         ];
