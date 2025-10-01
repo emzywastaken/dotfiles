@@ -31,7 +31,6 @@
   };
 
   powerManagement.powertop.enable = true;
-  services.auto-cpufreq.enable = true;
 
   environment.sessionVariables = {LIBVA_DRIVER_NAME = "iHD";};
 
