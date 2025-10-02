@@ -189,7 +189,10 @@
         name = "ns";
         runtimeInputs = with pkgs; [
           fzf
-          nix-search-tv
+          # https://github.com/NixOS/nixpkgs/pull/447307
+          (nix-search-tv.overrideAttrs {
+            env.GOEXPERIMENT = "jsonv2";
+          })
         ];
         # prevent IFD, thanks @Michael-C-Buckley
         text = ''exec "${pkgs.nix-search-tv.src}/nixpkgs.sh" "$@"'';
