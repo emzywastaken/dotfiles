@@ -1,4 +1,8 @@
-{pkgs, ...}: {
+{
+  pkgs,
+  lib,
+  ...
+}: {
   home.username = "emzy";
   home.homeDirectory = "/home/emzy";
 
@@ -31,7 +35,7 @@
     enable = true;
     font.name = "JetBrainsMono Nerd Font";
     font.size = 11;
-    settings = {
+    settings = lib.mkDefault {
       background_opacity = 0.8;
       confirm_os_window_close = 0;
     };

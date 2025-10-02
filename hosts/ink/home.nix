@@ -14,4 +14,9 @@
   wayland.windowManager.hyprland.settings = {
     xwayland.force_zero_scaling = true;
   };
+
+  programs.kitty = {
+    themeFile = "tokyo_night_night";
+    settings.background_opacity = 1.0;
+  };
 }
