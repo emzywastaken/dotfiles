@@ -13,6 +13,10 @@
 
   wayland.windowManager.hyprland.settings = {
     xwayland.force_zero_scaling = true;
+    device = {
+      name = "ascp1201:00-093a:3017-touchpad";
+      sensitivity = 0.3;
+    };
   };
 
   programs.kitty = {
