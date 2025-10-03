@@ -26,6 +26,15 @@ in {
       zed = "zeditor";
     };
 
+    programs.fish.shellAliases = let
+      icon = pkgs.fetchurl {
+        url = "https://raw.githubusercontent.com/Michael-C-Buckley/nixos/1b09e5ae6c6431be61be8403c5774a47dbb2bbea/flake/user/files/.media/nixos.png";
+        hash = "sha256-3D2YB12FozwBT0ltTzrq/e04zoF2gB4TDUTkYh/mfXQ=";
+      };
+    in {
+      fetch = "fastfetch --logo ${icon} --logo-height 20 --logo-width 40";
+    };
+
     programs.fzf.enable = true;
     programs.fzf.enableFishIntegration = true;
 
@@ -38,8 +47,9 @@ in {
       settings.shell = "${lib.getExe pkgs.fish}";
     };
 
-    home.packages = lib.mkIf cfg.withStarshipPrompt [
-      pkgs.starship
-    ];
+    home.packages =
+      [pkgs.fastfetch]
+      ++ lib.optional cfg.withStarshipPrompt
+      pkgs.starship;
   };
 }
