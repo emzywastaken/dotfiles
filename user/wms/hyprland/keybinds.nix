@@ -48,6 +48,12 @@
         "$mainMod, K, movefocus, u"
         "$mainMod, J, movefocus, d"
 
+        # Move window with mainMod + Shift + hjkl
+        "$mainMod SHIFT, H, movewindow, l"
+        "$mainMod SHIFT, L, movewindow, r"
+        "$mainMod SHIFT, K, movewindow, u"
+        "$mainMod SHIFT, J, movewindow, d"
+
         # Switch workspaces with mainMod + [1-9|0]
         "$mainMod, 1, workspace, 1"
         "$mainMod, 2, workspace, 2"
