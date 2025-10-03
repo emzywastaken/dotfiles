@@ -35,8 +35,8 @@
     enable = true;
     font.name = "JetBrainsMono Nerd Font";
     font.size = 11;
-    settings = lib.mkDefault {
-      background_opacity = 0.8;
+    settings = {
+      background_opacity = lib.mkDefault 0.8;
       confirm_os_window_close = 0;
     };
     keybindings = {
