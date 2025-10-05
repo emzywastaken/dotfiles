@@ -11,8 +11,8 @@
 
   environment.systemPackages = with pkgs; [
     alacritty
-    btop
     brightnessctl
+    btop
     fd
     fzf
     git
