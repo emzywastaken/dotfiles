@@ -174,6 +174,31 @@ in {
     services.swww.enable = true;
     services.hyprpolkitagent.enable = true;
 
+    services.hypridle = {
+      enable = true;
+      settings = {
+        general = {
+          lock_cmd = "hyprlock";
+          # turning screen off before locking looks nicer
+          before_sleep_cmd = "hyprctl dispatch dpms off && loginctl lock-session";
+          after_sleep_cmd = "hyprctl dispatch dpms on";
+        };
+        listener = [
+          {
+            timeout = 180;
+            on-timeout = "systemctl suspend";
+          }
+          {
+            timeout = 60;
+            on-timeout = "brightnessctl -s s 5%"; # dim screen
+            on-resume = "brightnessctl -r";
+          }
+        ];
+      };
+    };
+
+    programs.hyprlock.enable = true;
+
     home.packages = [
       pkgs.waybar
     ];
