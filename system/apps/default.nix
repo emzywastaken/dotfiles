@@ -17,7 +17,6 @@
     fzf
     git
     go
-    networkmanagerapplet
     nodejs_22
     pavucontrol
     psmisc # killall
