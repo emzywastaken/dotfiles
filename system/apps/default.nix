@@ -23,7 +23,6 @@
     python3
     ripgrep
     rustup
-    swww
     unzip
     vim
     wget
