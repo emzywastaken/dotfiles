@@ -189,7 +189,7 @@ in {
             on-timeout = "systemctl suspend";
           }
           {
-            timeout = 60;
+            timeout = 90;
             on-timeout = "brightnessctl -s s 5%"; # dim screen
             on-resume = "brightnessctl -r";
           }
