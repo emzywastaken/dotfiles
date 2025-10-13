@@ -19,6 +19,8 @@
     };
   };
 
+  services.vnstat.enable = true;
+
   networking.hostName = "ink";
 
   hardware.graphics = {
