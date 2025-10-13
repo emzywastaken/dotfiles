@@ -49,6 +49,7 @@
     enable = true;
     userName = "emzywastaken";
     userEmail = "amiamemetoo@gmail.com";
+    delta.enable = true;
     extraConfig = {
       init.defaultBranch = "main";
     };
