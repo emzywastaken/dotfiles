@@ -2,6 +2,7 @@
   imports = [
     ./hyprland
     ./qtile
+    ./waybar
   ];
 
   services.dunst = {

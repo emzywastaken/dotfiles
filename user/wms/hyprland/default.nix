@@ -1,5 +1,4 @@
 {
-  pkgs,
   lib,
   config,
   ...
@@ -37,6 +36,10 @@ in {
   };
 
   config = lib.mkIf cfg.enable {
+    modules.waybar = lib.mkDefault {
+      enable = true;
+    };
+
     wayland.windowManager.hyprland = {
       enable = true;
       settings = let
@@ -198,9 +201,5 @@ in {
     };
 
     programs.hyprlock.enable = true;
-
-    home.packages = [
-      pkgs.waybar
-    ];
   };
 }

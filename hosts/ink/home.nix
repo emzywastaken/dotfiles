@@ -9,6 +9,7 @@
       monitorScale = 1.67;
       startupCommands = prev: lib.remove "waybar" prev ++ ["brightnessctl s 20%"];
     };
+    waybar.preset = "broken-purple";
   };
 
   wayland.windowManager.hyprland.settings = {
