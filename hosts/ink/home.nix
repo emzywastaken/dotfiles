@@ -13,6 +13,7 @@
   };
 
   wayland.windowManager.hyprland.settings = {
+    general."col.active_border" = lib.mkForce "rgb(89b4fa)";
     xwayland.force_zero_scaling = true;
     device = {
       name = "ascp1201:00-093a:3017-touchpad";
