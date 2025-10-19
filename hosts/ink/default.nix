@@ -42,5 +42,7 @@
     capabilities = "cap_perfmon,cap_dac_read_search+ep";
   };
 
+  virtualisation.waydroid.enable = true;
+
   system.nixos.tags = ["${config.networking.hostName}"];
 }
