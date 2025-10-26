@@ -6,7 +6,7 @@
   modules = {
     hyprland = {
       enable = true;
-      monitorScale = 1.67;
+      monitorScale = 1.6;
       startupCommands = prev: lib.remove "waybar" prev ++ ["brightnessctl s 20%"];
     };
     waybar.preset = "broken-purple";
