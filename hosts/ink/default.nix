@@ -23,8 +23,6 @@
 
   networking.hostName = "ink";
 
-  boot.kernelParams = ["i915.force_probe=!7d55" "xe.force_probe=7d55"];
-
   hardware.graphics = {
     extraPackages = with pkgs; [
       intel-media-driver
