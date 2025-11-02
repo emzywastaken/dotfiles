@@ -146,6 +146,8 @@
           "--enable-zero-copy"
         ];
       })
+      ghc
+      cabal-install
       gleam
       erlang # gleam need erlang
       file-roller
@@ -153,7 +155,7 @@
       neofetch
       nh
       obsidian
-      opam
+      opam # ocaml
       osu-lazer-bin
       qbittorrent
       qview
@@ -209,6 +211,7 @@
       nixd
       alejandra
       statix
+      haskell-language-server
     ];
 
   # Let Home Manager install and manage itself.
