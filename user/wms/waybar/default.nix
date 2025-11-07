@@ -11,6 +11,7 @@ in {
       enable = mkEnableOption "whether to enable waybar";
       preset = mkOption {
         type = types.enum ["gruvbox" "broken-purple"];
+        default = "broken-purple";
         description = "configuration preset to use";
       };
     };
