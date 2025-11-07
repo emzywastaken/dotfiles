@@ -47,12 +47,16 @@
 
   programs.git = {
     enable = true;
-    userName = "emzywastaken";
-    userEmail = "amiamemetoo@gmail.com";
-    delta.enable = true;
-    extraConfig = {
+    settings = {
       init.defaultBranch = "main";
+      user.email = "amiamemetoo@gmail.com";
+      user.name = "emzywastaken";
     };
+  };
+
+  programs.delta = {
+    enable = true;
+    enableGitIntegration = true;
   };
 
   programs.btop = {
