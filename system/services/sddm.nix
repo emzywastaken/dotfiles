@@ -12,7 +12,7 @@ in {
   };
   config = lib.mkIf cfg.enable {
     services.displayManager.sddm = let
-      silent-sddm = inputs.silent-sddm.packages.${pkgs.system}.default;
+      silent-sddm = inputs.silent-sddm.packages.${pkgs.stdenv.hostPlatform.system}.default;
     in {
       enable = true;
       package = pkgs.kdePackages.sddm;
@@ -30,7 +30,7 @@ in {
     };
 
     environment.systemPackages = [
-      inputs.silent-sddm.packages.${pkgs.system}.default
+      inputs.silent-sddm.packages.${pkgs.stdenv.hostPlatform.system}.default
     ];
   };
 }
