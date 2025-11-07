@@ -182,8 +182,7 @@ in {
       settings = {
         general = {
           lock_cmd = "hyprlock";
-          # turning screen off before locking looks nicer
-          before_sleep_cmd = "hyprctl dispatch dpms off && loginctl lock-session";
+          before_sleep_cmd = "loginctl lock-session";
           after_sleep_cmd = "hyprctl dispatch dpms on";
         };
         listener = [
