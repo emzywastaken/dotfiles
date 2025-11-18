@@ -133,6 +133,7 @@
   };
 
   services.gnome-keyring.enable = true;
+  services.syncthing.enable = true;
 
   home.packages = with pkgs;
     [
