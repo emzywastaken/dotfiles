@@ -1,4 +1,8 @@
-{pkgs, ...}: {
+{
+  pkgs,
+  inputs,
+  ...
+}: {
   # Shared packages
   programs = {
     firefox.enable = true;
@@ -10,6 +14,8 @@
   };
 
   environment.systemPackages = with pkgs; [
+    inputs.noctalia.packages.${pkgs.stdenv.hostPlatform.system}.default
+
     alacritty
     brightnessctl
     btop
