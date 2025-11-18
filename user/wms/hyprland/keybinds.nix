@@ -41,6 +41,7 @@
         "$mainMod, P, pseudo,"
         "$mainMod SHIFT, P, togglesplit,"
         "$mainMod, F, fullscreen"
+        "$mainMod SHIFT, F, fullscreen, 1"
 
         # Move focus with mainMod + hjkl
         "$mainMod, H, movefocus, l"
