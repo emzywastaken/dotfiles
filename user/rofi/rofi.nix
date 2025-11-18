@@ -4,7 +4,7 @@ in {
   programs.rofi = {
     enable = true;
     terminal = "${pkgs.kitty}/bin/kitty";
-    theme = ./themes/gruvbox-material.rasi;
+    theme = ./themes/tokyonight-custom.rasi;
   };
   xdg.dataFile."${themesDir}/squared-everforest.rasi".source = ./themes/squared-everforest.rasi;
   xdg.dataFile."${themesDir}/tokyonight.rasi".source = ./themes/tokyonight.rasi;
