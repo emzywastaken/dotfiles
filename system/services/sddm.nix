@@ -6,14 +6,13 @@
   ...
 }: let
   cfg = config.modules.sddm;
+  silent-sddm = inputs.silent-sddm.packages.${pkgs.stdenv.hostPlatform.system}.default;
 in {
   options.modules.sddm = {
     enable = lib.mkEnableOption "sddm";
   };
   config = lib.mkIf cfg.enable {
-    services.displayManager.sddm = let
-      silent-sddm = inputs.silent-sddm.packages.${pkgs.stdenv.hostPlatform.system}.default;
-    in {
+    services.displayManager.sddm = {
       enable = true;
       package = pkgs.kdePackages.sddm;
       wayland.enable = true;
@@ -30,7 +29,7 @@ in {
     };
 
     environment.systemPackages = [
-      inputs.silent-sddm.packages.${pkgs.stdenv.hostPlatform.system}.default
+      silent-sddm
     ];
   };
 }
