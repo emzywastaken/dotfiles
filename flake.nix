@@ -32,10 +32,15 @@
           inputs.home-manager.nixosModules.default
         ];
       };
+    pkgs = nixpkgs.legacyPackages.${system};
   in {
     nixosConfigurations.aje = mkSystem "aje";
 
     nixosConfigurations.ink = mkSystem "ink";
+
+    packages.${system} = {
+      wayland-debug = pkgs.callPackage ./pkgs/wayland-debug.nix {inherit (pkgs) python3Packages;};
+    };
 
     formatter.${system} = nixpkgs.legacyPackages.${system}.alejandra;
   };
