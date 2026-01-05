@@ -82,6 +82,8 @@
         # Special workspace (scratchpad)
         "$mainMod, S, togglespecialworkspace, magic"
         "$mainMod SHIFT, S, movetoworkspace, special:magic"
+        "$mainMod, KP_End, togglespecialworkspace, scratch-1"
+        "$mainMod SHIFT, KP_End, movetoworkspace, special:scratch-1"
 
         # Scroll through existing workspaces with mainMod + scroll
         "$mainMod, mouse_down, workspace, e+1"
