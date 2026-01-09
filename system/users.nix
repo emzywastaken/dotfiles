@@ -7,7 +7,7 @@
   users.users.emzy = {
     isNormalUser = true;
     extraGroups = ["wheel"];
-    shell = pkgs.zsh;
+    shell = pkgs.fish;
   };
 
   home-manager = {
