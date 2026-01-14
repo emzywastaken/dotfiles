@@ -162,6 +162,7 @@
           "--enable-zero-copy"
         ];
       })
+      gajim
       ghc
       cabal-install
       gleam
