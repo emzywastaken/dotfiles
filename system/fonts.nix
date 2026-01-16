@@ -2,6 +2,7 @@
   fonts.packages = with pkgs; [
     liberation_ttf
     nerd-fonts.jetbrains-mono
+    nerd-fonts.monaspace
   ];
   fonts.fontconfig.subpixel.rgba = "rgb";
 
