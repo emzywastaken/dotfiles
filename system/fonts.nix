@@ -3,6 +3,7 @@
     liberation_ttf
     nerd-fonts.jetbrains-mono
     nerd-fonts.monaspace
+    nerd-fonts.caskaydia-cove
   ];
   fonts.fontconfig.subpixel.rgba = "rgb";
 
