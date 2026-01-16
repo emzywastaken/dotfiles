@@ -147,6 +147,7 @@
   home.packages = with pkgs;
     [
       custom.spotify
+      custom.helium
 
       bat
       (bottles.override {removeWarningPopup = true;})
