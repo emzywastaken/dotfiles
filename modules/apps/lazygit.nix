@@ -11,7 +11,7 @@ in {
   };
 
   config = lib.mkIf cfg.enable {
-    programs.lazygit = {
+    hm.programs.lazygit = {
       enable = true;
       settings = {
         git.pagers = [

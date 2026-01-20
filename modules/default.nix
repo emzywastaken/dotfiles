@@ -13,7 +13,6 @@ in {
     ]
     ++ importDir ./services
     ++ importDir ./apps
-    ++ importDir ./wms
     ++ importDir ./hardware;
 
   networking.networkmanager.enable = true;

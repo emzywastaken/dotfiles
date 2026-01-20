@@ -1,0 +1,13 @@
+{pkgs, ...}: let
+  themesDir = "rofi/themes";
+in {
+  hm = {
+    programs.rofi = {
+      enable = true;
+      terminal = "${pkgs.kitty}/bin/kitty";
+      theme = ./themes/tokyonight-custom.rasi;
+    };
+    xdg.dataFile."${themesDir}/squared-everforest.rasi".source = ./themes/squared-everforest.rasi;
+    xdg.dataFile."${themesDir}/tokyonight.rasi".source = ./themes/tokyonight.rasi;
+  };
+}

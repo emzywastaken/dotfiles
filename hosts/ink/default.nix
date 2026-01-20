@@ -12,10 +12,18 @@
     grub.enable = true;
     sddm.enable = true;
     steam.enable = true;
-    wms = {
-      hyprland.enable = true;
-      niri.enable = true;
+    hyprland = {
+      enable = true;
+      monitorScale = 1.6;
+      startupCommands = prev:
+        lib.remove "waybar" prev
+        ++ [
+          "brightnessctl s 20%"
+          "noctalia-shell"
+        ];
     };
+    niri.enable = true;
+    waybar.preset = "broken-purple";
     tlp = {
       enable = true;
       chargeThreshold = 80;

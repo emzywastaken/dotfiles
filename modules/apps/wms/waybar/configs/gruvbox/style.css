@@ -1,0 +1,76 @@
+/* Base Styling */
+* {
+  border: none;
+  border-radius: 0;
+  font-family: "JetBrains Mono";
+  font-weight: bold;
+  font-size: 13px;
+  min-height: 0;
+  color: #ebdbb2;
+}
+
+window#waybar {
+  background: #1d2021;
+}
+
+/* Workspace Buttons */
+#workspaces button label {
+  color: #ebdbb2;
+  padding: 0 10px;
+}
+#workspaces button.active label {
+  color: #1d2021;
+}
+#workspaces button.active {
+  background: #D5C4A1;
+}
+
+/* Shared Padding & Margin for Modules */
+#power, #clock, #battery, #pulseaudio, #tray, #network,
+#custom-power, #custom-microphone {
+  padding: 0 10px;
+  margin: 3px 3px 3px 3px;
+  background: #D5C4A1;
+}
+
+/* Module Colors & Borders (now with left border instead of bottom) */
+#network {
+  color: #1d2021;
+}
+
+#custom-power {
+  color: #1d2021;
+}
+
+#custom-power:hover {
+  background-color: #458588;
+  color: #1d2021;
+}
+
+#custom-microphone,
+#custom-microphone.muted {
+  color: #1d2021;
+  min-width: 14px;
+}
+
+#pulseaudio {
+  color: #1d2021;
+}
+
+#pulseaudio.muted {
+  padding: 0 20px;
+  color: #1d2021;
+}
+
+#battery {
+  color: #1d2021;
+}
+
+#clock {
+  color: #1d2021;
+}
+
+#tray {
+  color: #1d2021;
+}
+

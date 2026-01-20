@@ -1,9 +1,14 @@
 {
   pkgs,
+  lib,
   config,
   inputs,
   ...
-}: {
+}: let
+  username = "emzy";
+in {
+  imports = [(lib.mkAliasOptionModule ["hm"] ["home-manager" "users" username])];
+
   users.users.emzy = {
     isNormalUser = true;
     extraGroups = ["wheel"];
@@ -17,7 +22,7 @@
     backupFileExtension = "bak";
     overwriteBackup = true;
     users = {
-      "emzy" = import ../hosts/${config.networking.hostName}/home.nix;
+      "${username}" = import ../hosts/${config.networking.hostName}/home.nix;
     };
   };
 }

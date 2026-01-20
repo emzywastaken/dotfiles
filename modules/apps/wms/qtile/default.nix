@@ -4,12 +4,10 @@
   config,
   ...
 }: let
-  cfg = config.modules.wms.qtile;
+  cfg = config.modules.qtile;
 in {
   options = {
-    modules.wms.qtile = {
-      enable = lib.mkEnableOption "qtile" // {default = true;};
-    };
+    modules.qtile.enable = lib.mkEnableOption "qtile" // {default = true;};
   };
 
   config = lib.mkIf cfg.enable {
@@ -31,5 +29,7 @@ in {
       pkgs.xclip
       pkgs.xwallpaper
     ];
+
+    hm.xdg.configFile."qtile/config.py".source = ./config.py;
   };
 }

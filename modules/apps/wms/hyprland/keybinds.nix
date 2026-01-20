@@ -5,7 +5,7 @@
   ...
 }: {
   config = lib.mkIf config.modules.hyprland.enable {
-    wayland.windowManager.hyprland.settings = let
+    hm.wayland.windowManager.hyprland.settings = let
       # seems hacky
       t = pkgs.writeShellScriptBin "toggle-fullcharge" ''
         export SHELL=/bin/sh

@@ -11,7 +11,7 @@
     grub.enable = true;
     sddm.enable = true;
     steam.enable = true;
-    wms.hyprland.enable = true;
+    hyprland.enable = true;
     tlp.enable = true;
     nvidia = {
       enable = true;

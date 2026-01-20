@@ -3,20 +3,6 @@
     ../home.nix # Shared config
   ];
 
-  modules = {
-    hyprland = {
-      enable = true;
-      monitorScale = 1.6;
-      startupCommands = prev:
-        lib.remove "waybar" prev
-        ++ [
-          "brightnessctl s 20%"
-          "noctalia-shell"
-        ];
-    };
-    waybar.preset = "broken-purple";
-  };
-
   services.dunst.enable = lib.mkForce false;
 
   wayland.windowManager.hyprland.settings = {

@@ -1,5 +1,5 @@
 {pkgs, ...}: {
-  programs.zsh = {
+  hm.programs.zsh = {
     enable = true;
     enableCompletion = true;
     autosuggestion.enable = true;
@@ -50,7 +50,7 @@
     '';
   };
 
-  home.packages = [
+  hm.home.packages = [
     pkgs.starship
   ];
 }
