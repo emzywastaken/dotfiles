@@ -3,12 +3,18 @@
   inputs,
   ...
 }: {
+  modules = {
+    lazygit.enable = true;
+    fish = {
+      enable = true;
+      defaultInteractiveShell = true;
+    };
+  };
+
   # Shared packages
   programs = {
     firefox.enable = true;
-    # firejail.enable = true;
     zsh.enable = true;
-    fish.enable = true;
     nix-ld.enable = true;
     localsend.enable = true;
   };

@@ -13,6 +13,8 @@ in {
   };
 
   config = lib.mkIf cfg.enable {
+    programs.fish.enable = true;
+
     hm = {
       programs.fish.enable = true;
 
