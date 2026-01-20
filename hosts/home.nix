@@ -6,18 +6,9 @@
   home.username = "emzy";
   home.homeDirectory = "/home/emzy";
 
-  # imports = [
-  #   ../user
-  # ];
-
   home.stateVersion = "24.11";
 
   home.shell.enableShellIntegration = false;
-
-  # modules.fish = {
-  #   enable = true;
-  #   defaultInteractiveShell = true;
-  # };
 
   programs.alacritty = {
     enable = true;
