@@ -45,8 +45,9 @@ in {
     xdg.portal.enable = true;
     xdg.portal.extraPortals = [pkgs.xdg-desktop-portal-gtk];
 
-    modules.waybar = lib.mkDefault {
-      enable = true;
+    modules = {
+      waybar.enable = lib.mkDefault true;
+      noctalia-shell.enable = true;
     };
 
     hm = {config, ...}: {
