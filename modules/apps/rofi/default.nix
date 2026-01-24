@@ -1,13 +1,20 @@
 {pkgs, ...}: let
   themesDir = "rofi/themes";
 in {
-  hm = {
-    programs.rofi = {
-      enable = true;
-      terminal = "${pkgs.kitty}/bin/kitty";
-      theme = ./themes/tokyonight-custom.rasi;
-    };
-    xdg.dataFile."${themesDir}/squared-everforest.rasi".source = ./themes/squared-everforest.rasi;
-    xdg.dataFile."${themesDir}/tokyonight.rasi".source = ./themes/tokyonight.rasi;
+  hj = {
+    packages = [pkgs.rofi];
+
+    xdg.config.files."rofi/config.rasi".text = ''
+      configuration {
+        location: 0;
+        xoffset: 0;
+        yoffset: 0;
+      }
+      @theme "tokyonight-custom"
+    '';
+
+    xdg.data.files."${themesDir}/squared-everforest.rasi".source = ./themes/squared-everforest.rasi;
+    xdg.data.files."${themesDir}/tokyonight-custom.rasi".source = ./themes/tokyonight-custom.rasi;
+    xdg.data.files."${themesDir}/tokyonight.rasi".source = ./themes/tokyonight.rasi;
   };
 }
