@@ -35,6 +35,7 @@
           ./overlays
           ./modules
           inputs.home-manager.nixosModules.default
+          inputs.hjem.nixosModules.default
         ];
       };
     pkgs = nixpkgs.legacyPackages.${system};
