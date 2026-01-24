@@ -3,6 +3,7 @@
     ./hyprland
     ./qtile
     ./niri
+    ./oxwm.nix
   ];
 
   hm = {
