@@ -10,18 +10,6 @@
 
   home.shell.enableShellIntegration = false;
 
-  programs.alacritty = {
-    enable = true;
-    settings = {
-      window.opacity = 0.9;
-      font.size = 11;
-      font.normal = {
-        family = "JetBrainsMonoNerdFont";
-        style = "Regular";
-      };
-    };
-  };
-
   programs.kitty = {
     enable = true;
     font.name = "JetBrainsMono Nerd Font";
