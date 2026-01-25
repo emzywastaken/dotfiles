@@ -1,8 +1,4 @@
-{
-  pkgs,
-  inputs,
-  ...
-}: {
+{pkgs, ...}: {
   modules = {
     lazygit.enable = true;
     fish = {
@@ -17,6 +13,10 @@
     zsh.enable = true;
     nix-ld.enable = true;
     localsend.enable = true;
+    neovim = {
+      enable = true;
+      defaultEditor = true;
+    };
   };
 
   environment.systemPackages = with pkgs; [
