@@ -18,6 +18,10 @@
       enable = true;
       defaultEditor = true;
     };
+    vscode = {
+      enable = true;
+      package = pkgs.vscode.fhs;
+    };
   };
 
   environment.systemPackages = with pkgs; [

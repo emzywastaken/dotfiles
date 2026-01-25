@@ -25,11 +25,6 @@
     };
   };
 
-  programs.vscode = {
-    enable = true;
-    package = pkgs.vscode.fhs;
-  };
-
   programs.direnv = {
     enable = true;
     nix-direnv.enable = true;
