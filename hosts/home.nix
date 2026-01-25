@@ -25,25 +25,6 @@
     };
   };
 
-  programs.git = {
-    enable = true;
-    settings = {
-      init.defaultBranch = "main";
-      user.email = "amiamemetoo@gmail.com";
-      user.name = "emzywastaken";
-    };
-  };
-
-  programs.delta = {
-    enable = true;
-    enableGitIntegration = true;
-    options = {
-      navigate = true;
-      dark = true;
-      line-numbers = true;
-    };
-  };
-
   programs.btop = {
     enable = true;
     settings.vim_keys = true;

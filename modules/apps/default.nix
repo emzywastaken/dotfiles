@@ -24,7 +24,6 @@
     btop
     fd
     fzf
-    git
     go
     nodejs_22
     pavucontrol
