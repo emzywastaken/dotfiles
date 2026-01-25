@@ -30,10 +30,6 @@
     package = pkgs.vscode.fhs;
   };
 
-  programs.obs-studio = {
-    enable = true;
-  };
-
   programs.direnv = {
     enable = true;
     nix-direnv.enable = true;

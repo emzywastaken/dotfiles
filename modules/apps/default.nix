@@ -13,6 +13,7 @@
     zsh.enable = true;
     nix-ld.enable = true;
     localsend.enable = true;
+    obs-studio.enable = true;
     neovim = {
       enable = true;
       defaultEditor = true;
