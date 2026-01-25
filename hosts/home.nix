@@ -35,8 +35,6 @@
     nix-direnv.enable = true;
   };
 
-  programs.element-desktop.enable = true;
-
   home.pointerCursor = {
     x11.enable = true;
     gtk.enable = true;

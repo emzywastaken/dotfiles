@@ -23,6 +23,7 @@
   environment.systemPackages = with pkgs; [
     anki
     brightnessctl
+    element-desktop
     fd
     fzf
     go
