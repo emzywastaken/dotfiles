@@ -18,13 +18,10 @@
       enable = true;
       defaultEditor = true;
     };
-    vscode = {
-      enable = true;
-      package = pkgs.vscode.fhs;
-    };
   };
 
   environment.systemPackages = with pkgs; [
+    vscode.fhs
     anki
     brightnessctl
     element-desktop
