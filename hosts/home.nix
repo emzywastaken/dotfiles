@@ -25,11 +25,6 @@
     };
   };
 
-  programs.btop = {
-    enable = true;
-    settings.vim_keys = true;
-  };
-
   programs.vscode = {
     enable = true;
     package = pkgs.vscode.fhs;
