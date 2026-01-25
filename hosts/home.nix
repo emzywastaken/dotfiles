@@ -35,8 +35,6 @@
     nix-direnv.enable = true;
   };
 
-  programs.anki.enable = true;
-
   programs.element-desktop.enable = true;
 
   programs.mpv.enable = true;

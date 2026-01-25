@@ -21,6 +21,7 @@
   };
 
   environment.systemPackages = with pkgs; [
+    anki
     brightnessctl
     fd
     fzf
