@@ -60,16 +60,6 @@
         default = ["kitty.desktop"];
       };
     };
-    mimeApps = {
-      enable = true;
-      defaultApplications = {
-        "application/pdf" = ["org.pwmt.zathura-pdf-mupdf.desktop"];
-        "image/png" = ["com.interversehq.qView.desktop"];
-        "image/jpeg" = ["com.interversehq.qView.desktop"];
-        "inode/directory" = ["thunar.desktop"];
-        "video/mp4" = ["vlc.desktop"];
-      };
-    };
   };
 
   services.syncthing.enable = true;
