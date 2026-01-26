@@ -9,6 +9,7 @@ in {
         location: 0;
         xoffset: 0;
         yoffset: 0;
+        terminal: "xdg-terminal-exec";
       }
       @theme "tokyonight-custom"
     '';
