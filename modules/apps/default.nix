@@ -24,8 +24,12 @@
     };
   };
 
-  xdg.mime = {
-    defaultApplications = {
+  xdg = {
+    terminal-exec = {
+      enable = true;
+      settings.default = ["kitty.desktop"];
+    };
+    mime.defaultApplications = {
       "application/pdf" = ["org.pwmt.zathura-pdf-mupdf.desktop"];
       "image/png" = ["com.interversehq.qView.desktop"];
       "image/jpeg" = ["com.interversehq.qView.desktop"];
