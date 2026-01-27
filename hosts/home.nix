@@ -10,21 +10,6 @@
 
   home.shell.enableShellIntegration = false;
 
-  programs.kitty = {
-    enable = true;
-    font.name = "JetBrainsMono Nerd Font";
-    font.size = 11;
-    settings = {
-      background_opacity = lib.mkDefault 0.8;
-      confirm_os_window_close = 0;
-      scrollback_pager_history_size = 5;
-    };
-    keybindings = {
-      "ctrl+f2" = "detach_tab";
-      "ctrl+f3" = "detach_tab ask";
-    };
-  };
-
   home.pointerCursor = {
     x11.enable = true;
     gtk.enable = true;
