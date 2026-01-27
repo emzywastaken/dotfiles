@@ -9,6 +9,11 @@
       inputs.nixpkgs.follows = "nixpkgs";
     };
 
+    hjem = {
+      url = "github:feel-co/hjem";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
+
     silent-sddm = {
       url = "github:/uiriansan/SilentSDDM";
       inputs.nixpkgs.follows = "nixpkgs";
@@ -30,6 +35,7 @@
           ./overlays
           ./modules
           inputs.home-manager.nixosModules.default
+          inputs.hjem.nixosModules.default
         ];
       };
     pkgs = nixpkgs.legacyPackages.${system};

@@ -10,6 +10,7 @@ in {
       ./boot.nix
       ./fonts.nix
       ./users.nix
+      ./home.nix
     ]
     ++ importDir ./services
     ++ importDir ./apps
