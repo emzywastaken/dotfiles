@@ -30,6 +30,8 @@
     };
   };
 
+  boot.kernelParams = ["usbcore.autosuspend=-1"];
+
   services.vnstat.enable = true;
 
   networking.hostName = "ink";
