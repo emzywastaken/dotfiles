@@ -1,7 +1,7 @@
 {
   qt = {
     enable = true;
-    platformTheme = "gtk";
+    platformTheme = "gtk2";
     style = "adwaita-dark";
   };
 }
