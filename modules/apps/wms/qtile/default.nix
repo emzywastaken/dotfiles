@@ -17,10 +17,6 @@ in {
       windowManager.qtile.enable = true;
       autoRepeatDelay = 400;
       autoRepeatInterval = 30;
-      displayManager.sessionCommands = ''
-        xrandr --dpi 127.3
-        xwallpaper --zoom ~/walls/birds.png
-      '';
     };
 
     services.libinput.touchpad.naturalScrolling = true;
@@ -30,6 +26,6 @@ in {
       pkgs.xwallpaper
     ];
 
-    hm.xdg.configFile."qtile/config.py".source = ./config.py;
+    hj.xdg.config.files."qtile/config.py".source = ./config.py;
   };
 }
