@@ -10,14 +10,6 @@
 
   home.shell.enableShellIntegration = false;
 
-  home.pointerCursor = {
-    x11.enable = true;
-    gtk.enable = true;
-    package = pkgs.bibata-cursors;
-    size = 24;
-    name = "Bibata-Modern-Ice";
-  };
-
   xdg = {
     enable = true;
     userDirs = {

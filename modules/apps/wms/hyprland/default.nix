@@ -56,7 +56,9 @@ in {
         settings = let
           default-execs = [
             "waybar"
-            "hyprctl setcursor ${config.home.pointerCursor.name} ${toString config.home.pointerCursor.size}"
+            # "hyprctl setcursor ${config.home.pointerCursor.name} ${toString config.home.pointerCursor.size}"
+            # TODO: use new custom options
+            "hyprctl setcursor Bibata-Modern-Ice 24"
           ];
         in {
           monitor = ",preferred,auto,${toString cfg.monitorScale}";

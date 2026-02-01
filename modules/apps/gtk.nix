@@ -31,5 +31,16 @@ in {
   hj.xdg.config.files."gtk-3.0/settings.ini".text = settingsIni;
   hj.xdg.config.files."gtk-4.0/settings.ini".text = settingsIni;
 
-  environment.systemPackages = [pkgs.adw-gtk3 pkgs.gruvbox-plus-icons];
+  environment = {
+    systemPackages = [
+      pkgs.adw-gtk3
+      pkgs.gruvbox-plus-icons
+      pkgs.bibata-cursors
+    ];
+
+    sessionVariables = {
+      XCURSOR_SIZE = 24;
+      XCURSOR_THEME = "Bibata-Modern-Ice";
+    };
+  };
 }
