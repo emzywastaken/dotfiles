@@ -17,6 +17,4 @@
       createDirectories = true;
     };
   };
-
-  services.syncthing.enable = true;
 }
