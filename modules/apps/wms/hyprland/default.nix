@@ -188,26 +188,24 @@ in {
       ${cfg.extraConfig}
     '';
 
+    services.hypridle.enable = true;
+    hj.xdg.config.files."hypr/hypridle.conf".text = ''
+      listener {
+        timeout=180
+        on-timeout=systemctl suspend
+      }
+
+      listener {
+        timeout=90
+        on-timeout=brightnessctl -s s 5% # dim screen
+        on-resume=brightnessctl -r
+      }
+
+    '';
+
     hm = {config, ...}: {
       services.swww.enable = true;
       services.hyprpolkitagent.enable = true;
-
-      services.hypridle = {
-        enable = true;
-        settings = {
-          listener = [
-            {
-              timeout = 180;
-              on-timeout = "systemctl suspend";
-            }
-            {
-              timeout = 90;
-              on-timeout = "brightnessctl -s s 5%"; # dim screen
-              on-resume = "brightnessctl -r";
-            }
-          ];
-        };
-      };
     };
   };
 }
