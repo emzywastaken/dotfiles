@@ -12,10 +12,7 @@
       font_family JetBrainsMono Nerd Font
       font_size 11
 
-      include ${pkgs.kitty-themes}/share/kitty-themes/tokyo_night_night.conf
-
-      # Shell integration is sourced and configured manually
-      shell_integration no-rc
+      include ${pkgs.kitty-themes}/share/kitty-themes/themes/tokyo_night_night.conf
 
       background_opacity 1.000000
       confirm_os_window_close 0
