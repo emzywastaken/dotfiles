@@ -64,6 +64,7 @@ in {
       '';
 
       default-execs = [
+        "dbus-update-activation-environment --systemd DISPLAY HYPRLAND_INSTANCE_SIGNATURE WAYLAND_DISPLAY XDG_CURRENT_DESKTOP XDG_SESSION_TYPE && systemctl --user stop hyprland-session.target && systemctl --user start hyprland-session.target"
         "waybar"
         # TODO: use new custom options
         "hyprctl setcursor Bibata-Modern-Ice 24"
