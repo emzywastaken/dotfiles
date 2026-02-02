@@ -9,10 +9,12 @@
     packages = [pkgs.kitty];
 
     xdg.config.files."kitty/kitty.conf".text = ''
+      include ${pkgs.kitty-themes}/share/kitty-themes/themes/tokyo_night_night.conf
+
       font_family JetBrainsMono Nerd Font
       font_size 11
 
-      include ${pkgs.kitty-themes}/share/kitty-themes/themes/tokyo_night_night.conf
+      cursor_shape beam
 
       background_opacity 1.000000
       confirm_os_window_close 0
