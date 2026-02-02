@@ -22,7 +22,7 @@ in {
     backupFileExtension = "bak";
     overwriteBackup = true;
     users = {
-      "${username}" = import ../hosts/${config.networking.hostName}/home.nix;
+      "${username}" = import ../hosts/home.nix;
     };
   };
 }
