@@ -198,7 +198,19 @@ in {
 
     hm = {config, ...}: {
       services.swww.enable = true;
-      services.hyprpolkitagent.enable = true;
+    };
+    systemd.user.services.hyprpolkitagent = {
+      wantedBy = ["graphical-session.target"];
+
+      unitConfig = {
+        Description = "Hyprland PolicyKit Agent";
+        PartOf = ["graphical-session.target"];
+        After = ["graphical-session.target"];
+      };
+
+      serviceConfig = {
+        ExecStart = "${pkgs.hyprpolkitagent}/libexec/hyprpolkitagent";
+      };
     };
   };
 }
