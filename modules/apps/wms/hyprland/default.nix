@@ -7,10 +7,6 @@
   inherit (lib) mkEnableOption mkOption types concatStringsSep getExe;
   cfg = config.modules.hyprland;
 in {
-  imports = [
-    ./keybinds.nix
-  ];
-
   options = {
     modules.hyprland = {
       enable = mkEnableOption "hyprland";
