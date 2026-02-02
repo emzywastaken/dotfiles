@@ -39,8 +39,8 @@
   };
 
   environment.systemPackages = with pkgs; [
-    vscode.fhs
     anki
+    blender
     brightnessctl
     element-desktop
     fd
@@ -54,6 +54,7 @@
     rustup
     unzip
     vim
+    vscode.fhs
     wget
     wl-clipboard
 
