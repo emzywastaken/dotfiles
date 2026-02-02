@@ -21,6 +21,15 @@
           "brightnessctl s 20%"
           "noctalia-shell"
         ];
+      extraConfig = ''
+        device {
+          name=ascp1201:00-093a:3017-touchpad
+          sensitivity=0.3
+        }
+        xwayland {
+          force_zero_scaling=true
+        }
+      '';
     };
     niri.enable = true;
     waybar.preset = "broken-purple";

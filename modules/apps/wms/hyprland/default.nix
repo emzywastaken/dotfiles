@@ -31,7 +31,7 @@ in {
       extraConfig = mkOption {
         type = types.lines;
         default = "";
-        description = "Extra configuration lins to add to config";
+        description = "Extra configuration lines to add to config";
       };
     };
   };
@@ -161,11 +161,6 @@ in {
         workspace_back_and_forth=true
       }
 
-      device {
-        name=ascp1201:00-093a:3017-touchpad
-        sensitivity=0.300000
-      }
-
       misc {
         disable_hyprland_logo=true
         force_default_wallpaper=-1
@@ -175,16 +170,13 @@ in {
         cm_enabled=false
       }
 
-      xwayland {
-        force_zero_scaling=true
-      }
-
       windowrule=float on, match:class xdg-desktop-portal-gtk
       windowrule=float on, match:class chrome-nngceckbapebfimnlniiiahkandclblb-Default
       windowrule=immediate on, match:class ^(cs2)$
       windowrule=suppress_event maximize, match:class .*
       windowrule=no_focus on, match:class ^$, match:title ^$, match:xwayland 1, match:float 1, match:fullscreen 0, match:pin 0
 
+      # Host Specific
       ${cfg.extraConfig}
     '';
 
