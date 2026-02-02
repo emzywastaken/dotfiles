@@ -196,9 +196,6 @@ in {
 
     '';
 
-    hm = {config, ...}: {
-      services.swww.enable = true;
-    };
     systemd.user.services.hyprpolkitagent = {
       wantedBy = ["graphical-session.target"];
 
@@ -210,6 +207,26 @@ in {
 
       serviceConfig = {
         ExecStart = "${pkgs.hyprpolkitagent}/libexec/hyprpolkitagent";
+      };
+    };
+
+    systemd.user.services.swww = {
+      wantedBy = ["graphical-session.target"];
+
+      unitConfig = {
+        ConditionEnvironment = "WAYLAND_DISPLAY";
+        Description = "swww-daemon";
+        After = ["graphical-session.target"];
+        PartOf = ["graphical-session.target"];
+      };
+
+      serviceConfig = {
+        ExecStart = "${lib.getExe' pkgs.swww "swww-daemon"}";
+        Environment = [
+          "PATH=$PATH:${lib.makeBinPath [pkgs.swww]}"
+        ];
+        Restart = "always";
+        RestartSec = 10;
       };
     };
   };
