@@ -1,8 +1,4 @@
-{
-  pkgs,
-  inputs,
-  ...
-}: {
+{pkgs, ...}: {
   modules = {
     lazygit.enable = true;
     fish = {
@@ -17,15 +13,38 @@
     zsh.enable = true;
     nix-ld.enable = true;
     localsend.enable = true;
+    obs-studio.enable = true;
+    neovim = {
+      enable = true;
+      defaultEditor = true;
+    };
+    direnv = {
+      enable = true;
+      nix-direnv.enable = true;
+    };
+  };
+
+  xdg = {
+    terminal-exec = {
+      enable = true;
+      settings.default = ["kitty.desktop"];
+    };
+    mime.defaultApplications = {
+      "application/pdf" = ["org.pwmt.zathura-pdf-mupdf.desktop"];
+      "image/png" = ["com.interversehq.qView.desktop"];
+      "image/jpeg" = ["com.interversehq.qView.desktop"];
+      "inode/directory" = ["thunar.desktop"];
+      "video/mp4" = ["vlc.desktop"];
+    };
   };
 
   environment.systemPackages = with pkgs; [
-    alacritty
+    anki
+    blender
     brightnessctl
-    btop
+    element-desktop
     fd
     fzf
-    git
     go
     nodejs_22
     pavucontrol
@@ -35,6 +54,7 @@
     rustup
     unzip
     vim
+    vscode.fhs
     wget
     wl-clipboard
 

@@ -11,15 +11,21 @@ in {
   };
 
   config = lib.mkIf cfg.enable {
-    hm.programs.lazygit = {
-      enable = true;
-      settings = {
-        git.pagers = [
-          {
-            colorArg = "always";
-            pager = "${pkgs.delta}/bin/delta --dark --paging=never";
-          }
-        ];
+    hj = {
+      packages = [
+        pkgs.lazygit
+      ];
+
+      xdg.config.files."lazygit/config.yml" = {
+        generator = lib.generators.toYAML {};
+        value = {
+          git.pagers = [
+            {
+              colorArgs = "always";
+              pager = "${pkgs.delta}/bin/delta --dark --paging=never";
+            }
+          ];
+        };
       };
     };
   };

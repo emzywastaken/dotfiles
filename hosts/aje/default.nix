@@ -11,11 +11,14 @@
     grub.enable = true;
     sddm.enable = true;
     steam.enable = true;
-    hyprland.enable = true;
     tlp.enable = true;
     nvidia = {
       enable = true;
       withSpecialisation = true;
+    };
+    hyprland = {
+      enable = true;
+      startupCommands = ["brightnessctl s 20%"];
     };
   };
 

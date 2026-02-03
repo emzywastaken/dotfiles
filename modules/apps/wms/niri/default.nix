@@ -15,8 +15,9 @@ in {
 
     xdg.portal.enable = true;
     xdg.portal.extraPortals = [pkgs.xdg-desktop-portal-gtk pkgs.xdg-desktop-portal-gnome];
-    # hm.xdg.configFile."niri/config.kdl".source = ./config.kdl;
 
     environment.systemPackages = [pkgs.xwayland-satellite];
+
+    hj.xdg.config.files."niri/config.kdl".source = ./config.kdl;
   };
 }

@@ -1,4 +1,5 @@
 {
+  pkgs,
   lib,
   config,
   ...
@@ -8,7 +9,7 @@
 in {
   options.modules = {
     waybar = {
-      enable = mkEnableOption "whether to enable waybar";
+      enable = mkEnableOption "waybar";
       preset = mkOption {
         type = types.enum ["gruvbox" "broken-purple"];
         default = "broken-purple";
@@ -18,12 +19,10 @@ in {
   };
 
   config = mkIf cfg.enable {
-    hm = {
-      programs.waybar = {
-        enable = true;
-        style = ./configs/${cfg.preset}/style.css;
-      };
-      xdg.configFile."waybar/config.jsonc".source = ./configs/${cfg.preset}/config.jsonc;
+    hj = {
+      packages = [pkgs.waybar];
+      xdg.config.files."waybar/config.jsonc".source = ./configs/${cfg.preset}/config.jsonc;
+      xdg.config.files."waybar/style.css".source = ./configs/${cfg.preset}/style.css;
     };
   };
 }
