@@ -192,6 +192,8 @@ in {
 
     '';
 
+    services.playerctld.enable = true;
+
     systemd.user.services.hyprpolkitagent = {
       wantedBy = ["graphical-session.target"];
 
