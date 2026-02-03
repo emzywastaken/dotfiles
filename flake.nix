@@ -4,11 +4,6 @@
   inputs = {
     nixpkgs.url = "github:nixos/nixpkgs/nixos-unstable";
 
-    home-manager = {
-      url = "github:nix-community/home-manager";
-      inputs.nixpkgs.follows = "nixpkgs";
-    };
-
     hjem = {
       url = "github:feel-co/hjem";
       inputs.nixpkgs.follows = "nixpkgs";
@@ -34,7 +29,6 @@
           ./hosts/${hostname}
           ./overlays
           ./modules
-          inputs.home-manager.nixosModules.default
           inputs.hjem.nixosModules.default
         ];
       };
