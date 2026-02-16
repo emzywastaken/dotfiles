@@ -14,7 +14,7 @@
       font_family JetBrainsMono Nerd Font
       font_size 11
 
-      cursor_shape beam
+      shell_integration enabled
 
       background_opacity 1.000000
       confirm_os_window_close 0
