@@ -40,7 +40,6 @@
       erlang # gleam need erlang
       file-roller
       kitty
-      neofetch
       nh
       obsidian
       opam # ocaml
