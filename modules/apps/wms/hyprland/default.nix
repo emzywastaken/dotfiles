@@ -218,20 +218,20 @@ in {
       };
     };
 
-    systemd.user.services.swww = {
+    systemd.user.services.awww = {
       wantedBy = ["graphical-session.target"];
 
       unitConfig = {
         ConditionEnvironment = "WAYLAND_DISPLAY";
-        Description = "swww-daemon";
+        Description = "awww";
         After = ["graphical-session.target"];
         PartOf = ["graphical-session.target"];
       };
 
       serviceConfig = {
-        ExecStart = "${lib.getExe' pkgs.swww "swww-daemon"}";
+        ExecStart = "${lib.getExe' pkgs.awww "awww-daemon"}";
         Environment = [
-          "PATH=$PATH:${lib.makeBinPath [pkgs.swww]}"
+          "PATH=$PATH:${lib.makeBinPath [pkgs.awww]}"
         ];
         Restart = "always";
         RestartSec = 10;
