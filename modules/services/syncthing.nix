@@ -9,4 +9,5 @@
   #   unitConfig.ConditionUser = "emzy";
   # };
   systemd.packages = [pkgs.syncthing];
+  services.syncthing.enable = true;
 }
