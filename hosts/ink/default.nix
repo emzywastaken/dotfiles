@@ -19,7 +19,7 @@
         lib.remove "waybar" prev
         ++ [
           "brightnessctl s 20%"
-          "noctalia-shell"
+          "noctalia"
         ];
       extraConfig = ''
         device {
