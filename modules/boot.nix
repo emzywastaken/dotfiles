@@ -18,5 +18,7 @@ in {
       loader.grub.efiInstallAsRemovable = true;
       kernelPackages = pkgs.linuxPackages_zen;
     };
+    # https://github.com/NixOS/nixpkgs/issues/535850
+    system.boot.loader.kernelFile = "vmlinuz";
   };
 }
