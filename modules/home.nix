@@ -37,7 +37,7 @@
       ghc
       cabal-install
       gleam
-      erlang # gleam need erlang
+      beamPackages.erlang # gleam need erlang
       file-roller
       kitty
       nh
