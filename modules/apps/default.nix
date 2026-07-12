@@ -46,6 +46,7 @@
     fd
     fzf
     go
+    helix
     nodejs_22
     pavucontrol
     psmisc # killall
