@@ -7,6 +7,6 @@
 
   programs.virt-manager.enable = true;
 
-  environment.systemPackages = [pkgs.distrobox];
+  environment.systemPackages = [pkgs.distrobox pkgs.winboat];
   users.users.emzy.extraGroups = ["docker"];
 }
